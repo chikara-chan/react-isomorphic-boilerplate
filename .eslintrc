@@ -1,0 +1,20 @@
+{
+  "parser": "babel-eslint",
+  "extends": "standard",
+  "env": {
+    "node": true,
+    "es6": true,
+    "mocha": true
+  },
+  "ecmaFeatures": {
+    "arrowFunctions": true,
+     "jsx": true
+  },
+  "rules": {
+    "func-style": [2, "declaration", { "allowArrowFunctions": true }],
+    "no-unused-vars": 0
+  },
+  "plugins": [
+    "react"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "apps": [{
+    "name": "koa2-ssr",
+    "script": "bin/production.js",
+    // "cwd": "/absolute/path/to/project",
+    "exec_mode": "cluster",
+    "instances": 0,
+    "max_memory_restart": "1G",
+    "autorestart": true,
+    "node_args": [],
+    "args": [],
+    "env": {
+      "NODE_ENV": "production"
+    }
+  }]
+}
