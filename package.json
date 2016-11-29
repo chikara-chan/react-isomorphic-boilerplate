@@ -1,7 +1,7 @@
 {
   "name": "react-isomorphic",
   "version": "1.0.0",
-  "author": "wssgcg1213",
+  "author": "Chikara Chan",
   "scripts": {
     "start": "node bin/development.js",
     "production": "node bin/production.js",
