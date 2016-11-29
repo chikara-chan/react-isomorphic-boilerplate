@@ -7,8 +7,7 @@
     "production": "node bin/production.js",
     "build": "npm run clean && webpack --config webpack.build.js",
     "clean": "rm -rf public/build/ && rm -rf dist/",
-    "test": "mocha -u bdd --compilers js:babel-core/register",
-    "dev": "npm start"
+    "test": "mocha -u bdd --compilers js:babel-core/register"
   },
   "dependencies": {
     "babel-cli": "^6.7.7",
