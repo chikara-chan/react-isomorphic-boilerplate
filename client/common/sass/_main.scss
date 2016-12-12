@@ -1,0 +1,17 @@
+main {
+	height: 100%;
+	>.left {
+		position: fixed;
+		float: left;
+		width: 200px;
+		height:100%;
+		padding-top: 14px;
+		background:#222d32;
+		@import 'side-bar';
+	}
+	>.right {
+		min-height: 100%;
+		margin-left: 200px;
+		background: #e6e7eb;
+	}
+}

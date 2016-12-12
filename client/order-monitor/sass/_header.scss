@@ -1,0 +1,27 @@
+.header {
+	.breadcrumb {
+		min-height: 60px;
+		line-height: 60px;
+		margin-bottom: 0;
+		padding: 0 20px;
+		li {
+			margin: auto 20px;
+			a {
+				color: #333333;
+				text-decoration: none;
+				cursor: default;
+			}
+			&.active {
+				a {
+					color: #999999;
+				}
+			}
+			&::before {
+				display: none;
+			}
+		}
+	}
+	.fa {
+
+	}
+}
