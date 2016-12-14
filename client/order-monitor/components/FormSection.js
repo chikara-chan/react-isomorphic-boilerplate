@@ -1,4 +1,4 @@
-import { Component } from 'react';
+import React, { Component } from 'react';
 import { findDOMNode } from 'react-dom';
 import { Form, FormGroup, ControlLabel, FormControl, Button } from 'react-bootstrap';
 

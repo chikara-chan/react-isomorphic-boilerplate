@@ -1,4 +1,4 @@
-import { Component } from 'react';
+import React, { Component } from 'react';
 import SideBar from './SideBar';
 
 class MainSection extends Component {

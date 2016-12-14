@@ -1,8 +1,8 @@
-import { Component } from 'react';
+import React, { Component } from 'react';
 import { NavDropdown, MenuItem, Nav } from 'react-bootstrap';
-import imgLogo from '../assets/logo.png';
-import imgMenu from '../assets/menu.png';
-import imgAvatar from '../assets/avatar.png';
+// import imgLogo from '../assets/logo.png';
+// import imgMenu from '../assets/menu.png';
+// import imgAvatar from '../assets/avatar.png';
 
 class Header extends Component {
     constructor(props, context) {
@@ -14,10 +14,10 @@ class Header extends Component {
             <header>
             	<div className="left">
                     <img className="img-1"
-                         src={imgLogo} />
+                         src={''} />
                     <span>CRM</span>
                     <img className="img-2"
-                         src={imgMenu} />
+                         src={''} />
             	</div>
             	<div className="right">
                     <Nav className="menu">
@@ -26,7 +26,7 @@ class Header extends Component {
                             <MenuItem >注销</MenuItem>
                         </NavDropdown>
                     </Nav>
-            		<img src={imgAvatar} />
+            		<img src={''} />
             	</div>
             </header>
         );

@@ -1,4 +1,4 @@
-import { Component } from 'react';
+import React, { Component } from 'react';
 import { Breadcrumb } from 'react-bootstrap';
 
 class Header extends Component {

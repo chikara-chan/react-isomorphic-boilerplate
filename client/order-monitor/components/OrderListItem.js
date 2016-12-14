@@ -1,4 +1,4 @@
-import { Component } from 'react';
+import React, { Component } from 'react';
 import { Checkbox, Button } from 'react-bootstrap';
 import PopupModal from './PopupModal';
 import ConfirmModal from './ConfirmModal';
@@ -13,31 +13,32 @@ class OrderListItem extends Component {
     }
 
     _closeModal() {
-        this.setState({ 
-            showModal: false 
+        this.setState({
+            showModal: false
         });
     }
 
     _openModal() {
-        this.setState({ 
-            showModal: true 
+        this.setState({
+            showModal: true
         });
     }
 
     _closeConfirmModal() {
-        this.setState({ 
-            showConfirmModal: false 
+        this.setState({
+            showConfirmModal: false
         });
     }
 
     _openConfirmModal() {
-        this.setState({ 
-            showConfirmModal: true 
+        this.setState({
+            showConfirmModal: true
         });
     }
 
     render() {
         const { order }=this.props;
+
         return (
             <li className="order-list-item">
                 <div className="header">

@@ -1,4 +1,4 @@
-import { Component } from 'react';
+import React, { Component } from 'react';
 import { Modal, Button } from 'react-bootstrap';
 
 class ConfirmModal extends Component {

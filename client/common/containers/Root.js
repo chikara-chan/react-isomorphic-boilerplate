@@ -1,4 +1,4 @@
-import { Component } from 'react';
+import React, { Component } from 'react';
 import Header from '../components/Header';
 import MainSection from '../components/MainSection';
 import '../sass';

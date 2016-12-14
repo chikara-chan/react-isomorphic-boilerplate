@@ -1,4 +1,4 @@
-import { Component } from 'react';
+import React, { Component } from 'react';
 import { Modal, Form, FormGroup, ControlLabel, FormControl, Button } from 'react-bootstrap';
 
 class PopupModal extends Component {

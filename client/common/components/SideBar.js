@@ -1,4 +1,4 @@
-import { Component } from 'react';
+import React, { Component } from 'react';
 import { PanelGroup, Panel, ListGroup, ListGroupItem } from 'react-bootstrap';
 
 class SideBar extends Component {

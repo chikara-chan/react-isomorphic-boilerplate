@@ -1,13 +1,13 @@
 import { GET_ORDER, SEARCH } from '../constants/ActionTypes';
 
 const initialState = [{
-    id: 2,
+    id: 1,
     text: 'Use Flux'
 }, {
     id: 2,
     text: 'Use Flux'
 }, {
-    id: 2,
+    id: 3,
     text: 'Use Flux'
 }];
 

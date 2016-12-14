@@ -1,4 +1,4 @@
-import { Component, PropTypes } from 'react';
+import React, { Component, PropTypes } from 'react';
 
 class LaserBeam extends Component {
     constructor(props, context) {

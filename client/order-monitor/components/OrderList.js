@@ -1,4 +1,4 @@
-import { Component } from 'react';
+import React, { Component } from 'react';
 import OrderListItem from './OrderListItem';
 
 class OrderList extends Component {
@@ -23,9 +23,9 @@ class OrderList extends Component {
                                 return true;
                             case 1:
                                 return false;
-                        }    
-                    }).map(order => 
-                        <OrderListItem order={order} />
+                        }
+                    }).map(order =>
+                        <OrderListItem order={order} key={order.id}/>
 		            )}
 		        </ul>
             </div>

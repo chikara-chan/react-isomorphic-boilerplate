@@ -1,16 +1,19 @@
-var path = require('path');
-var webpack = require('webpack');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
+const path = require('path');
+const webpack = require('webpack');
 
 module.exports = {
     devtool: 'eval-source-map',
+    context: path.resolve(__dirname, '..'),
     entry: {
-        'order-monitor/index': ['./client/order-monitor/index.js', 'webpack-hot-middleware/client']
+        'order-monitor/index': [
+            './client/order-monitor/index.js',
+            'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000'
+        ]
     },
     output: {
         path: path.resolve(__dirname, '../dist'),
         filename: '[name].js',
-        publicPath: '/dist'
+        publicPath: '/'
     },
     module: {
         loaders: [{
@@ -22,7 +25,7 @@ module.exports = {
             loader: "url?limit=10000"
         }, {
             test: /\.scss$/,
-            loader: ExtractTextPlugin.extract('style', 'css!sass')
+            loader: 'style!css!sass'
       }]
     },
     externals: {
@@ -38,12 +41,13 @@ module.exports = {
         extensions: ['', '.js', '.json', '.css', '.scss', '.html']
     },
     plugins: [
+        new webpack.optimize.OccurenceOrderPlugin(),
         new webpack.HotModuleReplacementPlugin(),
+        new webpack.NoErrorsPlugin(),
         new webpack.optimize.CommonsChunkPlugin({
           name: 'common/index',
           filename: '[name].js'
         }),
-        new ExtractTextPlugin('[name].css'),
         new webpack.DefinePlugin({
             'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
         })

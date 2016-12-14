@@ -1,4 +1,4 @@
-import { Component } from 'react';
+import React, { Component } from 'react';
 import { Nav, NavItem, Checkbox, Alert } from 'react-bootstrap';
 import classnames from 'classnames';
 import SubNav from './SubNav';
@@ -38,7 +38,7 @@ class MainSection extends Component {
            })
        }
     }
- 
+
     _onSelect(eventKey) {
         this.setState({activeKey: eventKey});
     }
@@ -98,8 +98,9 @@ class MainSection extends Component {
                     <Nav bsStyle="tabs"
                          activeKey={this.state.activeKey}
                          onSelect={this._onSelect.bind(this)}>
-                        {navEntries.map((entry, index) => 
+                        {navEntries.map((entry, index) =>
                             <NavItem eventKey={index}
+                                     key={entry.text}
                                      onClick={this._onClick.bind(this, entry.primaryOrderType)}>
                                      {entry.text}
                             </NavItem>
@@ -123,6 +124,7 @@ class MainSection extends Component {
                                 <Checkbox className={classnames({hide: activeKey == 0 ? false : true})}
                                           checked={activeCheckboxIndex == index ? true: false}
                                           onClick={this._onClickCheckbox.bind(this, index)}
+                                          key={entry.text}
                                           inline>
                                           {entry.text}
                                 </Checkbox>

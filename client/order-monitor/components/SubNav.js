@@ -1,4 +1,4 @@
-import { Component } from 'react';
+import React, { Component } from 'react';
 import { Nav, NavItem } from 'react-bootstrap';
 import classnames from 'classnames';
 import { SHOW_DANGER, SHOW_WARN, SHOW_REJECT, SHOW_TIMEOUT } from '../constants/PrimaryOrderTypes.js';
@@ -79,8 +79,9 @@ class SubNav extends Component {
                 <Nav bsStyle="pills"
                      activeKey={this.state.activeKey}
                      onSelect={this._onSelect.bind(this)}>
-                    {entries.map((entry, index) => 
+                    {entries.map((entry, index) =>
                         <NavItem eventKey={index}
+                                 key={entry.text}
                                  onClick={this._onClick.bind(this, primaryOrderType, entry.secondaryOrderType)}>
                             {entry.text}
                         </NavItem>
