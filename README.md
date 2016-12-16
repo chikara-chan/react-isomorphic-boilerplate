@@ -1,3 +1,3 @@
-# **koa-react-isomorphic**
+# react-isomorphic
 
-keywords: koa2,react,redux,isomorphic app
+This is a universal React Isomorphic boilerplate for developing your web ssr app

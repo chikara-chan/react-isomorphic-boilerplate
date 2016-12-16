@@ -31,7 +31,9 @@ function mapDispatchToProps(dispatch) {
         actions: bindActionCreators(actions, dispatch)
     };
 }
-
+function t(){
+    console.log('aa')
+}
 export default connect(
     mapStateToProps,
 	mapDispatchToProps
