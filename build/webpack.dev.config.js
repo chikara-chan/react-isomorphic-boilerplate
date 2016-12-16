@@ -19,14 +19,17 @@ module.exports = {
         loaders: [{
             test: /\.js$/,
             exclude: /node_modules/,
-            loaders: ['babel']
+            loader: 'babel',
+            query: {
+                'presets': ['es2015', 'react', 'stage-0', 'react-hmre']
+            }
         }, {
             test: /\.(jpg|png|gif|webp)$/,
-            loader: "url?limit=10000"
+            loader: 'url?limit=8000'
         }, {
             test: /\.scss$/,
             loader: 'style!css!sass'
-      }]
+        }]
     },
     externals: {
         'react': 'window.React',
@@ -45,8 +48,8 @@ module.exports = {
         new webpack.HotModuleReplacementPlugin(),
         new webpack.NoErrorsPlugin(),
         new webpack.optimize.CommonsChunkPlugin({
-          name: 'common/index',
-          filename: '[name].js'
+            name: 'common/index',
+            filename: '[name].js'
         }),
         new webpack.DefinePlugin({
             'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)

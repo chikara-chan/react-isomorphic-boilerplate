@@ -1,9 +1,8 @@
-import Router from 'koa-router';
-import home from '../controllers/home';
+import Router from 'koa-router'
+import home from '../controllers/home'
 
-const router = new Router({
-    prefix: '/'
-});
-router.get('/', home);
+const router = new Router()
 
-export default router;
+router.get('', home)
+
+export default router

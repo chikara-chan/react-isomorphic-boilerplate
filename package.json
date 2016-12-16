@@ -4,7 +4,7 @@
     "author": "Chikara Chan",
     "scripts": {
         "dev:client": "NODE_ENV=development node build/client.dev.js",
-        "dev:server": "NODE_ENV=development BABEL_ENV=production node build/server.dev.js",
+        "dev:server": "NODE_ENV=development BABEL_ENV=development node build/server.dev.js",
         "build": "NODE_ENV=production webpack --config ./build/webpack.prod.config.js --progress"
     },
     "dependencies": {
@@ -14,8 +14,10 @@
         "koa": "^2.0.0",
         "koa-bodyparser": "^3.2.0",
         "koa-convert": "^1.2.0",
+        "koa-csrf": "^3.0.0",
         "koa-json": "^2.0.0",
-        "koa-logger": "2.0.0",
+        "koa-logger": "^2.0.0",
+        "koa-onerror": "^3.0.0",
         "koa-router": "^7.0.0",
         "koa-static": "^3.0.0",
         "koa-views": "^5.0.0",
