@@ -2,7 +2,7 @@
     "name": "react-isomorphic",
     "version": "1.0.0",
     "author": "Chikara Chan",
-    "description": "This is a universal React Isomorphic boilerplate for developing your web ssr app",
+    "description": "This is a universal React Isomorphic boilerplate for making server side render web app",
     "scripts": {
         "dev": "NODE_ENV=development BABEL_ENV=development nodemon build/server.dev.js --watch server",
         "build": "NODE_ENV=production webpack --config ./build/webpack.prod.config.js --progress"
