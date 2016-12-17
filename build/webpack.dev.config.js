@@ -1,12 +1,13 @@
 const path = require('path');
 const webpack = require('webpack');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
     devtool: 'eval-source-map',
     context: path.resolve(__dirname, '..'),
     entry: {
-        'order-monitor/index': [
-            './client/order-monitor/index.js',
+        'index': [
+            './client/index.js',
             'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000'
         ]
     },
@@ -28,7 +29,7 @@ module.exports = {
             loader: 'url?limit=8000'
         }, {
             test: /\.scss$/,
-            loader: 'style!css!sass'
+            loader: ExtractTextPlugin.extract('style', 'css!postcss!sass')
         }]
     },
     externals: {
@@ -48,11 +49,12 @@ module.exports = {
         new webpack.HotModuleReplacementPlugin(),
         new webpack.NoErrorsPlugin(),
         new webpack.optimize.CommonsChunkPlugin({
-            name: 'common/index',
+            name: 'common',
             filename: '[name].js'
         }),
         new webpack.DefinePlugin({
             'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
-        })
+        }),
+        new ExtractTextPlugin('[name].css')
     ],
 };

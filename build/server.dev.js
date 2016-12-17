@@ -3,6 +3,7 @@ require('babel-core/register')({
     'presets': ['es2015', 'react', 'stage-0']
 })
 require.extensions['.scss'] = () => false
+
 const app = require('../server/app.js').default
 const convert = require('koa-convert')
 const webpack = require('webpack')
@@ -19,5 +20,5 @@ app.use(convert(devMiddleware(compile, {
     publicPath: config.output.publicPath,
 })))
 app.use(convert(hotMiddleware(compile)))
-
 app.listen(port)
+console.log(`==> 🌎  Listening on port ${port}. Open up http://localhost:${port}/ in your browser.`);

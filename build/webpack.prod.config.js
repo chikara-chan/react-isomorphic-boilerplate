@@ -6,7 +6,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 module.exports = {
     context: path.resolve(__dirname, '../'),
     entry: {
-        'order-monitor/index': './client/order-monitor/index.js'
+        'index': './client/index.js'
     },
     output: {
         path: path.resolve(__dirname, '../dist'),
@@ -22,13 +22,13 @@ module.exports = {
             }
         }, {
             test: /\.(jpg|png|gif|webp)$/,
-            loader: "url?limit=10000"
+            loader: 'url?limit=8000'
         }, {
             test: /\.scss$/,
             loader: ExtractTextPlugin.extract('style', 'css!postcss!sass')
       }]
     },
-    postcss: [autoprefixer({browsers: ['last 2 versions']})],
+    postcss: [autoprefixer({browsers: ['> 5%']})],
     externals: {
         'react': 'window.React',
         'react-dom': 'window.ReactDOM',
@@ -51,12 +51,12 @@ module.exports = {
             comments: false
 		}),
         new webpack.optimize.CommonsChunkPlugin({
-          name: 'common/index',
+          name: 'common',
           filename: '[name].js'
         }),
-        new ExtractTextPlugin('[name].css'),
         new webpack.DefinePlugin({
             'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
-        })
+        }),
+        new ExtractTextPlugin('[name].css')
     ],
 };

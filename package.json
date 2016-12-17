@@ -4,8 +4,7 @@
     "author": "Chikara Chan",
     "description": "This is a universal React Isomorphic boilerplate for developing your web ssr app",
     "scripts": {
-        "dev:client": "NODE_ENV=development node build/client.dev.js",
-        "dev:server": "NODE_ENV=development BABEL_ENV=development node build/server.dev.js",
+        "dev": "NODE_ENV=development BABEL_ENV=development nodemon build/server.dev.js --watch server",
         "build": "NODE_ENV=production webpack --config ./build/webpack.prod.config.js --progress"
     },
     "dependencies": {
@@ -18,7 +17,6 @@
         "koa-csrf": "^3.0.0",
         "koa-json": "^2.0.0",
         "koa-logger": "^2.0.0",
-        "koa-onerror": "^3.0.0",
         "koa-router": "^7.0.0",
         "koa-static": "^3.0.0",
         "koa-views": "^5.0.0",
@@ -27,6 +25,7 @@
         "react-bootstrap-datetimepicker": "0.0.22",
         "react-dom": "^15.3.1",
         "react-redux": "^4.4.5",
+        "react-router": "^3.0.0",
         "redux": "^3.6.0",
         "redux-thunk": "^2.1.0",
         "superagent": "^2.2.0"
@@ -48,6 +47,7 @@
         "koa-webpack-hot-middleware": "^1.0.3",
         "koa-webpack-middleware": "^1.0.3",
         "node-sass": "^3.9.0",
+        "nodemon": "^1.11.0",
         "open": "0.0.5",
         "postcss-loader": "^0.11.1",
         "redux-devtools": "^3.3.1",
@@ -62,7 +62,7 @@
     },
     "repository": {
         "type": "git",
-        "url": ""
+        "url": "https://github.com/chikara-chen/react-isomorphic.git"
     },
     "license": "MIT"
 }

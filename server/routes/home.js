@@ -3,6 +3,6 @@ import home from '../controllers/home'
 
 const router = new Router()
 
-router.get('', home)
+router.get('/', home)
 
 export default router

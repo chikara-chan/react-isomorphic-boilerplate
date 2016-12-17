@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router';
 import { PanelGroup, Panel, ListGroup, ListGroupItem } from 'react-bootstrap';
 
 class SideBar extends Component {
@@ -11,14 +12,14 @@ class SideBar extends Component {
         return (
             <div className="side-bar">
 			  	<PanelGroup accordion="true" >
-			    	<Panel header="高危订单监控中心"
+			    	<Panel header=""
                            defaultActiveKey="0">
 					    <ListGroup fill>
                             <ListGroupItem className="active">
-                                <a>高危订单监控</a>
+                                <Link to="">home</Link>
                             </ListGroupItem>
                             <ListGroupItem>
-                                <a>订单查询</a>
+                                <Link to="about">about</Link>
                             </ListGroupItem>
 					    </ListGroup>
 			    	</Panel>
