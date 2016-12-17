@@ -15,4 +15,3 @@ tmp
 .module-cache
 tmp/*
 .sass-cache/*
-npm-debug.log
