@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Breadcrumb } from 'react-bootstrap';
+import styles from '../sass/Header'
 
 class Header extends Component {
     constructor(props, context) {
@@ -8,7 +9,7 @@ class Header extends Component {
 
     render() {
         return (
-            <section className="header">
+            <section className={styles.header}>
             	<Breadcrumb>
                     <Breadcrumb.Item>
                         首页

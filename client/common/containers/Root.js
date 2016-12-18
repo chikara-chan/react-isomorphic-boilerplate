@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import Header from '../components/Header';
 import MainSection from '../components/MainSection';
 import * as actions from '../actions';
-import '../sass';
+import styles from '../sass/Root'
 
 class Root extends Component {
     constructor(props, context) {
@@ -15,7 +15,7 @@ class Root extends Component {
         const { children, orders, actions } = this.props;
 
         return (
-            <div className="root">
+            <div className={styles.root}>
             	<Header />
             	<MainSection>
                 {

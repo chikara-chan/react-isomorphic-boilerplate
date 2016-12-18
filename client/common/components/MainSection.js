@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import SideBar from './SideBar';
+import styles from '../sass/MainSection'
 
 class MainSection extends Component {
     constructor(props, context) {
@@ -9,11 +10,11 @@ class MainSection extends Component {
     render() {
         const { children } = this.props;
         return (
-            <main>
-                <div className="left">
+            <main className={styles.main}>
+                <div className={styles.left}>
                     <SideBar />
                 </div>
-                <div className="right">
+                <div className={styles.right}>
                     {children}
                 </div>
             </main>

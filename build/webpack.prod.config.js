@@ -1,7 +1,7 @@
-const path = require('path');
-const webpack = require('webpack');
-const autoprefixer = require('autoprefixer');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const path = require('path')
+const webpack = require('webpack')
+const autoprefixer = require('autoprefixer')
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 module.exports = {
     context: path.resolve(__dirname, '../'),
@@ -15,7 +15,7 @@ module.exports = {
     module: {
         loaders: [{
             test: /\.js$/,
-            exclude: /(node_modules|bower_components)/,
+            exclude: /(node_modules)/,
             loader: 'babel',
             query: {
                 'presets': ['es2015', 'react', 'stage-0']
@@ -25,10 +25,17 @@ module.exports = {
             loader: 'url?limit=8000'
         }, {
             test: /\.scss$/,
-            loader: ExtractTextPlugin.extract('style', 'css!postcss!sass')
-      }]
+            loaders: [
+                'style',
+                'css?modules&camelCase&localIdentName=[hash:base64:8]',
+                'postcss',
+                'sass'
+            ]
+        }]
     },
-    postcss: [autoprefixer({browsers: ['> 5%']})],
+    postcss: [autoprefixer({
+        browsers: ['> 5%']
+    })],
     externals: {
         'react': 'window.React',
         'react-dom': 'window.ReactDOM',
@@ -45,18 +52,18 @@ module.exports = {
         new webpack.optimize.OccurrenceOrderPlugin(),
         new webpack.optimize.DedupePlugin(),
         new webpack.optimize.UglifyJsPlugin({
-		    compress: {
-		        warnings: false
-		    },
+            compress: {
+                warnings: false
+            },
             comments: false
-		}),
+        }),
         new webpack.optimize.CommonsChunkPlugin({
-          name: 'common',
-          filename: '[name].js'
+            name: 'common',
+            filename: '[name].js'
         }),
         new webpack.DefinePlugin({
             'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
         }),
         new ExtractTextPlugin('[name].css')
     ],
-};
+}

@@ -1,10 +1,11 @@
-const path = require('path');
-const webpack = require('webpack');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const path = require('path')
+const webpack = require('webpack')
+const autoprefixer = require('autoprefixer')
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 module.exports = {
     devtool: 'eval-source-map',
-    context: path.resolve(__dirname, '..'),
+    context: path.resolve(__dirname, '../'),
     entry: {
         'index': [
             './client/index.js',
@@ -29,7 +30,8 @@ module.exports = {
             loader: 'url?limit=8000'
         }, {
             test: /\.scss$/,
-            loader: ExtractTextPlugin.extract('style', 'css!postcss!sass')
+            loader: ExtractTextPlugin.extract('style', 'css?modules&camelCase&localIdentName=[name]__[local]__[hash:base64:8]!sass')
+
         }]
     },
     externals: {
@@ -57,4 +59,4 @@ module.exports = {
         }),
         new ExtractTextPlugin('[name].css')
     ],
-};
+}

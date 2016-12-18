@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
 import { PanelGroup, Panel, ListGroup, ListGroupItem } from 'react-bootstrap';
+import styles from '../sass/SideBar'
 
 class SideBar extends Component {
     constructor(props, context) {
@@ -10,16 +11,19 @@ class SideBar extends Component {
     render() {
         const { children } = this.props;
         return (
-            <div className="side-bar">
+            <div className={styles.sideBar}>
 			  	<PanelGroup accordion="true" >
 			    	<Panel header=""
                            defaultActiveKey="0">
 					    <ListGroup fill>
-                            <ListGroupItem className="active">
+                            <ListGroupItem>
                                 <Link to="">home</Link>
                             </ListGroupItem>
                             <ListGroupItem>
                                 <Link to="about">about</Link>
+                            </ListGroupItem>
+                            <ListGroupItem>
+                                <Link to="setting">setting</Link>
                             </ListGroupItem>
 					    </ListGroup>
 			    	</Panel>

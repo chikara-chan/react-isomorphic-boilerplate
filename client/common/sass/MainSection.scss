@@ -1,0 +1,15 @@
+.main {
+    height: 100%;
+    .left {
+        position: fixed;
+        float: left;
+        width: 200px;
+        height:100%;
+        background:#222d32;
+    }
+    .right {
+        min-height: 100%;
+        margin-left: 200px;
+        background: #e6e7eb;
+    }
+}
