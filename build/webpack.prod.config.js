@@ -18,19 +18,15 @@ module.exports = {
             exclude: /(node_modules)/,
             loader: 'babel',
             query: {
-                'presets': ['es2015', 'react', 'stage-0']
+                'presets': ['es2015', 'react', 'stage-0'],
+                'plugins': ['transform-runtime']
             }
         }, {
             test: /\.(jpg|png|gif|webp)$/,
             loader: 'url?limit=8000'
         }, {
             test: /\.scss$/,
-            loaders: [
-                'style',
-                'css?modules&camelCase&localIdentName=[hash:base64:8]',
-                'postcss',
-                'sass'
-            ]
+            loader: ExtractTextPlugin.extract('style', 'css?modules&camelCase&localIdentName=[hash:base64:8]!postcss!sass')
         }]
     },
     postcss: [autoprefixer({
@@ -51,15 +47,15 @@ module.exports = {
     plugins: [
         new webpack.optimize.OccurrenceOrderPlugin(),
         new webpack.optimize.DedupePlugin(),
+        new webpack.optimize.CommonsChunkPlugin({
+            name: 'common',
+            filename: '[name].js'
+        }),
         new webpack.optimize.UglifyJsPlugin({
             compress: {
                 warnings: false
             },
             comments: false
-        }),
-        new webpack.optimize.CommonsChunkPlugin({
-            name: 'common',
-            filename: '[name].js'
         }),
         new webpack.DefinePlugin({
             'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)

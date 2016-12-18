@@ -1,7 +1,7 @@
 const path = require('path')
 const webpack = require('webpack')
 const autoprefixer = require('autoprefixer')
-const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const ProgressBarPlugin = require('progress-bar-webpack-plugin');
 
 module.exports = {
     devtool: 'eval-source-map',
@@ -23,15 +23,19 @@ module.exports = {
             exclude: /node_modules/,
             loader: 'babel',
             query: {
-                'presets': ['es2015', 'react', 'stage-0', 'react-hmre']
+                'presets': ['es2015', 'react', 'stage-0', 'react-hmre'],
+                'plugins': ['transform-runtime']
             }
         }, {
             test: /\.(jpg|png|gif|webp)$/,
             loader: 'url?limit=8000'
         }, {
             test: /\.scss$/,
-            loader: ExtractTextPlugin.extract('style', 'css?modules&camelCase&localIdentName=[name]__[local]__[hash:base64:8]!sass')
-
+            loaders: [
+                'style',
+                'css?modules&camelCase&localIdentName=[name]__[local]__[hash:base64:8]',
+                'sass'
+            ]
         }]
     },
     externals: {
@@ -48,15 +52,16 @@ module.exports = {
     },
     plugins: [
         new webpack.optimize.OccurenceOrderPlugin(),
-        new webpack.HotModuleReplacementPlugin(),
-        new webpack.NoErrorsPlugin(),
+        new webpack.optimize.DedupePlugin(),
         new webpack.optimize.CommonsChunkPlugin({
             name: 'common',
             filename: '[name].js'
         }),
+        new webpack.HotModuleReplacementPlugin(),
+        new webpack.NoErrorsPlugin(),
         new webpack.DefinePlugin({
             'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
         }),
-        new ExtractTextPlugin('[name].css')
+        new ProgressBarPlugin({ summary: false }),
     ],
 }

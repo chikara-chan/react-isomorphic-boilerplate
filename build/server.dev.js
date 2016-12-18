@@ -16,10 +16,10 @@ const config = require('./webpack.dev.config')
 const port = 3000
 const compile = webpack(config)
 
+console.log(`\n==> 🌎  Listening on port ${port}. Open up http://localhost:${port}/ in your browser.\n`)
 app.use(convert(devMiddleware(compile, {
     noInfo: true,
-    publicPath: config.output.publicPath,
+    publicPath: config.output.publicPath
 })))
 app.use(convert(hotMiddleware(compile)))
 app.listen(port)
-console.log(`==> 🌎  Listening on port ${port}. Open up http://localhost:${port}/ in your browser.`);
