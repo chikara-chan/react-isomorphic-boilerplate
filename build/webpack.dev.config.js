@@ -5,10 +5,10 @@ const ProgressBarPlugin = require('progress-bar-webpack-plugin');
 
 module.exports = {
     devtool: 'eval-source-map',
-    context: path.resolve(__dirname, '../'),
+    context: path.resolve(__dirname, '..'),
     entry: {
         'index': [
-            './client/index.js',
+            './client',
             'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000'
         ]
     },

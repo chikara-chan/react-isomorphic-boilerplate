@@ -3,10 +3,10 @@ const webpack = require('webpack')
 const autoprefixer = require('autoprefixer')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
-module.exports = {
-    context: path.resolve(__dirname, '../'),
+module.exports = [{
+    context: path.resolve(__dirname, '..'),
     entry: {
-        'index': './client/index.js'
+        'index': './client'
     },
     output: {
         path: path.resolve(__dirname, '../dist'),
@@ -62,4 +62,45 @@ module.exports = {
         }),
         new ExtractTextPlugin('[name].css')
     ],
-}
+}, {
+    context: path.resolve(__dirname, '..'),
+    entry: {
+        'server': './server'
+    },
+    output: {
+        path: path.resolve(__dirname, '..'),
+        filename: '[name].js'
+    },
+    module: {
+        loaders: [{
+            test: /\.js$/,
+            exclude: /(node_modules)/,
+            loader: 'babel',
+            query: {
+                'presets': ['es2015', 'react', 'stage-0']
+            }
+        }, {
+            test: /\.(jpg|png|gif|webp)$/,
+            loader: null
+        }, {
+            test: /\.scss$/,
+            loader: null
+        }]
+    },
+    resolve: {
+        extensions: ['', '.js', '.json', '.css', '.scss', '.html']
+    },
+    plugins: [
+        new webpack.optimize.OccurrenceOrderPlugin(),
+        new webpack.optimize.DedupePlugin(),
+        new webpack.optimize.UglifyJsPlugin({
+            compress: {
+                warnings: false
+            },
+            comments: false
+        }),
+        new webpack.DefinePlugin({
+            'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
+        })
+    ],
+}]
