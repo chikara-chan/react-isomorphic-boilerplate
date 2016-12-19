@@ -1,6 +1,6 @@
 # React Isomorphic Boilerplate
 
-This is a universal React isomorphic boilerplate for building server side render web app
+An universal React isomorphic boilerplate for building server side render web app
 
 ## Introduction
 
