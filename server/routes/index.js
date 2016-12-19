@@ -11,7 +11,7 @@ fs.readdirSync(__dirname)
         return filename !== path.basename(__filename)
     })
     .forEach(function(filename) {
-        subRouter = require(path.join(__dirname, filename)).default
+        subRouter = require(`./${filename}`).default
         router.use(subRouter.routes(), subRouter.allowedMethods())
     })
 

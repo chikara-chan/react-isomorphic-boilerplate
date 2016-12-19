@@ -36,6 +36,9 @@ module.exports = {
                 'css?modules&camelCase&localIdentName=[name]__[local]__[hash:base64:8]',
                 'sass'
             ]
+        }, {
+            test: /\.json$/,
+            loader: 'json'
         }]
     },
     externals: {
@@ -48,7 +51,7 @@ module.exports = {
         'superagent': 'window.superagent',
     },
     resolve: {
-        extensions: ['', '.js', '.json', '.css', '.scss', '.html']
+        extensions: ['', '.js', '.json', '.scss']
     },
     plugins: [
         new webpack.optimize.OccurenceOrderPlugin(),

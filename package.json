@@ -5,7 +5,7 @@
     "scripts": {
         "dev": "NODE_ENV=development BABEL_ENV=development nodemon build/server.dev.js --watch server",
         "build": "npm run clean && NODE_ENV=production webpack --config ./build/webpack.prod.config.js --progress",
-        "clean": "rm -rf ./dist && rm ./server.js"
+        "clean": "rm -rf ./dist && rm -f ./server.js"
     },
     "dependencies": {
         "ejs": "^2.5.5",
@@ -41,10 +41,12 @@
         "css-loader": "^0.24.0",
         "extract-text-webpack-plugin": "^1.0.1",
         "file-loader": "^0.9.0",
+        "json-loader": "^0.5.4",
         "koa-webpack-dev-middleware": "^1.3.0",
         "koa-webpack-hot-middleware": "^1.0.3",
         "node-sass": "^3.9.0",
         "nodemon": "^1.11.0",
+        "null-loader": "^0.1.1",
         "postcss-loader": "^0.11.1",
         "progress-bar-webpack-plugin": "^1.9.0",
         "redux-devtools": "^3.3.1",
