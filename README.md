@@ -1,4 +1,5 @@
 # React Isomorphic Boilerplate
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/chikara-chan/react-isomorphic-boilerplate/pulls) [![npm](https://img.shields.io/npm/l/express.svg)](https://github.com/chikara-chan/react-isomorphic-boilerplate/blob/master/LICENSE)
 
 An universal React isomorphic boilerplate for building server side render web app.
 
