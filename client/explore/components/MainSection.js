@@ -15,7 +15,7 @@ class MainSection extends Component {
 
         return (
             <section className={styles.mainSection}>
-                    Setting
+                Explore
             </section>
         );
     }
