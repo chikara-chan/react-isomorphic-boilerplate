@@ -5,7 +5,7 @@ An universal React isomorphic boilerplate for building server side render web ap
 
 ## Introduction
 
-This repository is an universal React isomorphic boilerplate for developer to quickly build a super fast and powerfull web app that can be rendered both on the client and on the server using the most cutting-edge technology. The next step is to clone the repository and start customizing your personal project by modifying business code based on this boilerplate.
+This repository is an universal React isomorphic boilerplate for developer to quickly build a super fast and powerfull web app that can be rendered both on the client and on the server using the most cutting-edge technology. Compared to others, this boilerplate has more pithily and more elegant configuration file divided by environment variables, one for development, one for production. In addition, the directory structure is organized corresponding to MVC principle aim at bring developer the best developing experience.
 
 ## Technology Stack
 
