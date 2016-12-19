@@ -4,9 +4,7 @@ An universal React isomorphic boilerplate for building server side render web ap
 
 ## Introduction
 
-This repository is an universal React isomorphic boilerplate for developer to quickly build a super fast and powerfull web app that can be rendered both on the client and on the server using the most cutting-edge technology.
-
-The next step is to clone the repository and start customizing your personal project by modifying business code based on this boilerplate.
+This repository is an universal React isomorphic boilerplate for developer to quickly build a super fast and powerfull web app that can be rendered both on the client and on the server using the most cutting-edge technology. The next step is to clone the repository and start customizing your personal project by modifying business code based on this boilerplate.
 
 ## Technology Stack
 
@@ -31,6 +29,40 @@ The next step is to clone the repository and start customizing your personal pro
 - `npm run build` to compile and bundle the client and server files.
 - `npm start` to depoly the production server.
 
+## What's included
+
+```
+react-isomorphic-boilerplate/
+├── build/
+│   ├── server.dev.js
+│   ├── webpack.dev.config.js
+│   └── webpack.prod.config.js
+├── client/
+│   ├── about/
+│   ├── common/
+│   ├── home/
+│   ├── shared/
+│   ├── todo/
+│   ├── index.js
+│   └── route.js
+├── dist/
+├── server/
+│   ├── controllers/
+│   ├── middlewares/
+│   ├── models/
+│   ├── routes/
+│   ├── services/
+│   ├── views/
+│   ├── app.js
+│   └─ index.js
+├── .editorconfig
+├── .gitignore
+├── LICENSE
+├── package.json
+├── README.json
+└── yarn.lock
+```
+
 ## Why Isomorphic
 
 ###SEO
@@ -44,6 +76,10 @@ By the same token, if the server doesn’t render a full page of HTML but instea
 ###Maintainability
 
 While the ideal case can lead to a nice, clean separation of concerns, inevitably some bits of application logic or view logic end up duplicated between client and server, often in different languages. Common examples are date and currency formatting, form validations, and routing logic. This makes maintenance a nightmare, especially for more complex apps.
+
+## Author
+
+Chikara Chan
 
 ## License
 
