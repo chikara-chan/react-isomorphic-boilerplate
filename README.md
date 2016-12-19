@@ -9,19 +9,19 @@ This repository is an universal React isomorphic boilerplate for developer to qu
 
 ## Technology Stack
 
-- React
-- React Router
-- Redux
-- Redux+
-- CSS Modules
-- PostCSS
-- Sass
-- Koa
-- Koa+
-- Webpack
-- Webpack+
-- Babel
-- Babel+
+- [React](https://github.com/facebook/react)
+- [React Router](https://github.com/ReactTraining/react-router)
+- [Redux](https://github.com/reactjs/redux)
+- [Redux+](https://github.com/xgrommx/awesome-redux)
+- [CSS Modules](https://github.com/css-modules/css-modules)
+- [PostCSS](https://github.com/postcss/postcss)
+- [Sass](https://github.com/sass/sass)
+- [Koa](https://github.com/koajs/koa)
+- [Koa+](https://github.com/koajs)
+- [Webpack](https://github.com/webpack/webpack)
+- [Webpack+](https://webpack.js.org/loaders/)
+- [Babel](https://github.com/babel/babel)
+- [Babel+](http://babeljs.io/docs/plugins/)
 
 ## Getting Started
 
@@ -80,8 +80,8 @@ While the ideal case can lead to a nice, clean separation of concerns, inevitabl
 
 ## Author
 
-Chikara Chan
+[Chikara Chan](https://github.com/chikara-chan)
 
 ## License
 
-MIT
+[MIT](https://github.com/chikara-chan/react-isomorphic-boilerplate/blob/master/LICENSE)
