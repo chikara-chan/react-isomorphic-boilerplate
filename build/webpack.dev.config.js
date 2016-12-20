@@ -49,13 +49,7 @@ module.exports = {
         }]
     },
     externals: {
-        'react': 'window.React',
-        'react-dom': 'window.ReactDOM',
-        'redux': 'window.Redux',
-        'react-redux': 'window.ReactRedux',
         'react-bootstrap': 'window.ReactBootstrap',
-        'react-bootstrap-datetimepicker': 'window.ReactBootstrapDatetimePicker',
-        'superagent': 'window.superagent',
     },
     resolve: {
         extensions: ['', '.js', '.json', '.scss']
@@ -64,7 +58,7 @@ module.exports = {
         new webpack.optimize.OccurenceOrderPlugin(),
         new webpack.optimize.DedupePlugin(),
         new webpack.optimize.CommonsChunkPlugin({
-            name: 'common',
+            name: 'vendor',
             filename: '[name].js'
         }),
         new webpack.HotModuleReplacementPlugin(),
