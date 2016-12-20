@@ -2,12 +2,10 @@ require('babel-polyfill')
 require('babel-core/register')({
     presets: ['es2015', 'react', 'stage-0']
 })
-const hook = require('css-modules-require-hook');
-
-hook({
+require('css-modules-require-hook')({
     extensions: ['.scss'],
     generateScopedName: '[name]__[local]__[hash:base64:8]',
-});
+})
 require.extensions['.png'] = (module, filename) => {
     return false
 }
