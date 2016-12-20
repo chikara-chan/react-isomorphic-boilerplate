@@ -16,7 +16,14 @@ function getExternals() {
 const clientConfig = {
     context: path.resolve(__dirname, '..'),
     entry: {
-        'index': './client'
+        'index': './client',
+        'vendor': [
+            'react',
+            'react-dom',
+            'redux' ,
+            'react-redux',
+            'superagent'
+        ]
     },
     output: {
         path: path.resolve(__dirname, '../dist'),
@@ -43,13 +50,7 @@ const clientConfig = {
         browsers: ['> 5%']
     })],
     externals: {
-        'react': 'window.React',
-        'react-dom': 'window.ReactDOM',
-        'redux': 'window.Redux',
-        'react-redux': 'window.ReactRedux',
-        'react-bootstrap': 'window.ReactBootstrap',
-        'react-bootstrap-datetimepicker': 'window.ReactBootstrapDatetimePicker',
-        'superagent': 'window.superagent',
+        'react-bootstrap': 'window.ReactBootstrap'
     },
     resolve: {
         extensions: ['', '.js', '.json', '.scss']
@@ -58,7 +59,7 @@ const clientConfig = {
         new webpack.optimize.OccurrenceOrderPlugin(),
         new webpack.optimize.DedupePlugin(),
         new webpack.optimize.CommonsChunkPlugin({
-            name: 'common',
+            name: 'vendor',
             filename: '[name].js'
         }),
         new webpack.optimize.UglifyJsPlugin({

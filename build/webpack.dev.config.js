@@ -10,6 +10,13 @@ module.exports = {
         'index': [
             './client',
             'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000'
+        ],
+        'vendor': [
+            'react',
+            'react-dom',
+            'redux' ,
+            'react-redux',
+            'superagent'
         ]
     },
     output: {
