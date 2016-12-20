@@ -6,7 +6,7 @@
         "dev": "NODE_ENV=development BABEL_ENV=development nodemon build/server.dev.js --watch server",
         "build": "npm run clean && NODE_ENV=production webpack --config ./build/webpack.prod.config.js --progress",
         "clean": "rm -rf ./dist && rm -f ./server.js",
-        "start": "node ./server.js"
+        "serve": "node ./server.js"
     },
     "dependencies": {
         "ejs": "^2.5.5",
