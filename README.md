@@ -52,7 +52,6 @@ react-isomorphic-boilerplate/                // root directory
 │   ├── middlewares/                         // custom middlewares in server
 │   ├── models/                              // ORM models in server
 │   ├── routes/                              // route in server
-│   ├── services/                            // services in server
 │   ├── views/                               // static views in project
 │   ├── app.js                               // create koa instance in server
 │   └── index.js                             // server entry file
