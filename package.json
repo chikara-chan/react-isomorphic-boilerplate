@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "description": "An universal React isomorphic boilerplate for building server side render web app",
     "scripts": {
-        "dev": "NODE_ENV=development BABEL_ENV=development nodemon build/server.dev.js --watch server",
+        "dev": "NODE_ENV=development nodemon build/server.dev.js --watch server",
         "build": "npm run clean && NODE_ENV=production webpack --config ./build/webpack.prod.config.js --progress",
         "clean": "rm -rf ./dist && rm -f ./server.js",
         "start": "node ./server.js"
