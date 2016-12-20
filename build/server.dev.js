@@ -3,7 +3,7 @@ require('babel-core/register')({
     presets: ['es2015', 'react', 'stage-0']
 })
 require.extensions['.scss'] = () => false
-require.extensions['.png'] = () => false
+require.extensions['.png'] = (module, filename) => {console.dir(module);return false}
 
 const app = require('../server/app.js').default
 const convert = require('koa-convert')
