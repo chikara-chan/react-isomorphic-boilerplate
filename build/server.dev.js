@@ -7,7 +7,7 @@ require('css-modules-require-hook')({
     generateScopedName: '[name]__[local]__[hash:base64:8]',
 })
 require('asset-require-hook')({
-  extensions: ['png'],
+  extensions: ['jpg', 'png', 'gif', 'webp'],
   limit: 8000
 })
 
