@@ -2,8 +2,15 @@ require('babel-polyfill')
 require('babel-core/register')({
     presets: ['es2015', 'react', 'stage-0']
 })
-require.extensions['.scss'] = () => false
-require.extensions['.png'] = (module, filename) => {console.dir(module);return false}
+const hook = require('css-modules-require-hook');
+
+hook({
+    extensions: ['.scss'],
+    generateScopedName: '[name]__[local]__[hash:base64:8]',
+});
+require.extensions['.png'] = (module, filename) => {
+    return false
+}
 
 const app = require('../server/app.js').default
 const convert = require('koa-convert')
