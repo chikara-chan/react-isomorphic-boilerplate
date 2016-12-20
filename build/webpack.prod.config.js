@@ -98,7 +98,7 @@ const serverConfig = {
             }
         }, {
             test: /\.(jpg|png|gif|webp)$/,
-            loader: 'null'
+            loader: 'url?limit=8000'
         }, {
             test: /\.scss$/,
             loaders: [
