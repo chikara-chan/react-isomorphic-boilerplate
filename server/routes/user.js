@@ -1,8 +1,10 @@
 import Router from 'koa-router'
 import user from '../controllers/user'
 
-const router = new Router()
+const router = new Router({
+    prefix: '/user'
+})
 
-router.get('/api/user/getUserInfo', user.getUserInfo)
+router.get('/getUserInfo', user.getUserInfo)
 
 export default router
