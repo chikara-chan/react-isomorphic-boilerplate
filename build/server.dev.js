@@ -1,5 +1,5 @@
 require('babel-polyfill')
-require('babel-core/register')({
+require('babel-register')({
     presets: ['es2015', 'react', 'stage-0']
 })
 require('css-modules-require-hook')({
