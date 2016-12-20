@@ -6,9 +6,10 @@ require('css-modules-require-hook')({
     extensions: ['.scss'],
     generateScopedName: '[name]__[local]__[hash:base64:8]',
 })
-require.extensions['.png'] = (module, filename) => {
-    return false
-}
+require('asset-require-hook')({
+  extensions: ['png'],
+  limit: 8000
+})
 
 const app = require('../server/app.js').default
 const convert = require('koa-convert')
