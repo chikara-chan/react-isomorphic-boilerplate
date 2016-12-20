@@ -1,14 +1,13 @@
-import helpers from '../helpers'
-import models from '../models'
+import fs from 'fs'
+import path from 'path'
+import compose from 'koa-compose'
 
-async function catchError(ctx, next) {
-    try {
-        await next()
-    } catch (e) {
-        this.status = e.status || 500
-        this.body = this.status
-    }
-    if (this.status === 404) {
-        this.body = '404'
-    }
-}
+const middlewares = fs.readdirSync(__dirname)
+    .filter(filename =>
+        filename !== path.basename(__filename)
+    )
+    .map(filename =>
+        require(`./${filename}`).default
+    )
+
+export default compose(middlewares)

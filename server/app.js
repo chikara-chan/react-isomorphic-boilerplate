@@ -6,8 +6,8 @@ import logger from 'koa-logger'
 import path from 'path'
 import fs from 'fs'
 import router from './routes'
+import middlewares from './middlewares'
 // import models from './models'
-// import middlewares from './middlewares'
 
 const app = new Koa()
 
@@ -19,6 +19,7 @@ app.use(views(path.join(__dirname, 'views'), {
         html: 'ejs'
     }
 }))
+app.use(middlewares)
 app.use(router.routes())
 app.use(router.allowedMethods())
 

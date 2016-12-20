@@ -7,7 +7,7 @@ import configureStore from '../../client/common/store/configureStore'
 
 const store = configureStore()
 
-async function home(ctx, next) {
+async function clientRoute(ctx, next) {
     let _error, _redirectLocation, _renderProps
 
     match({ routes: route, location: ctx.url }, (error, redirectLocation, renderProps) => {
@@ -30,4 +30,4 @@ async function home(ctx, next) {
     }
 }
 
-export default home
+export default clientRoute
