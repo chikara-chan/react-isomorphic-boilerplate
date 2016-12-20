@@ -16,4 +16,3 @@ render(
     </Provider>,
     document.getElementById('root')
 )
-// testtest

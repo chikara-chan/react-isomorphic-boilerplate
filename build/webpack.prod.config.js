@@ -27,7 +27,7 @@ const clientConfig = {
     },
     output: {
         path: path.resolve(__dirname, '../dist'),
-        filename: '[name].js'
+        filename: '[name].[chunkhash:8].js'
     },
     module: {
         loaders: [{
@@ -59,8 +59,8 @@ const clientConfig = {
         new webpack.optimize.OccurrenceOrderPlugin(),
         new webpack.optimize.DedupePlugin(),
         new webpack.optimize.CommonsChunkPlugin({
-            name: 'vendor',
-            filename: '[name].js'
+            name: ['vendor', 'mainifest'],
+            filename: '[name].[chunkhash:8].js'
         }),
         new webpack.optimize.UglifyJsPlugin({
             compress: {
@@ -71,7 +71,7 @@ const clientConfig = {
         new webpack.DefinePlugin({
             'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
         }),
-        new ExtractTextPlugin('[name].css')
+        new ExtractTextPlugin('[name].[contenthash:8].css')
     ],
 }
 
