@@ -101,7 +101,10 @@ const serverConfig = {
             loader: 'null'
         }, {
             test: /\.scss$/,
-            loader: 'null'
+            loaders: [
+                'css/locals?modules&camelCase&localIdentName=[hash:base64:8]',
+                'sass'
+            ]
         }, {
             test: /\.json$/,
             loader: 'json'
