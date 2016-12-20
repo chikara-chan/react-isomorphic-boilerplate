@@ -20,10 +20,10 @@ class SideBar extends Component {
                                 <Link to="">home</Link>
                             </ListGroupItem>
                             <ListGroupItem>
-                                <Link to="about">about</Link>
+                                <Link to="explore">explore</Link>
                             </ListGroupItem>
                             <ListGroupItem>
-                                <Link to="setting">setting</Link>
+                                <Link to="about">about</Link>
                             </ListGroupItem>
 					    </ListGroup>
 			    	</Panel>
