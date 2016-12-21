@@ -4,6 +4,7 @@ import json from 'koa-json'
 import bodyParser from 'koa-bodyparser'
 import logger from 'koa-logger'
 import session from 'koa-session'
+import compress from 'koa-compress'
 import path from 'path'
 import router from './routes'
 import middlewares from './middlewares'
@@ -13,6 +14,7 @@ const app = new Koa()
 app.keys = ['this my secret', 'fuck you all']
 
 app.use(session(app))
+app.use(compress())
 app.use(bodyParser())
 app.use(json())
 app.use(logger())
