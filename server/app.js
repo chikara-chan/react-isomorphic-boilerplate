@@ -11,7 +11,7 @@ import middlewares from './middlewares'
 
 const app = new Koa()
 
-app.keys = ['this my secret', 'fuck you all']
+app.keys = ['this is a fucking secret']
 
 app.use(session(app))
 app.use(compress())
