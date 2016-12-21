@@ -1,22 +1,20 @@
-import React, { Component } from 'react';
-import { Provider } from 'react-redux';
-import CommonRoot from '../../../common/scripts/containers/Root';
-import DevTools from './DevTools';
-import App from './App';
+import React, { Component } from 'react'
+import DevTools from './DevTools'
+import App from './App'
 
 class Root extends Component {
-    render() {
-        const { store } = this.props;
-
-        return (
-            <Provider store={store}>
-                <CommonRoot>
-                    <App/>
-                    <DevTools />
-                </CommonRoot>
-            </Provider>
-        );
+    constructor(props) {
+        super(props)
     }
-};
 
-export default Root;
+    render() {
+        return (
+            <div>
+                <App/>
+                <DevTools />
+            </div>
+        )
+    }
+}
+
+export default Root
