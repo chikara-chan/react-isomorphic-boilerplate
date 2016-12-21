@@ -16,7 +16,6 @@ module.exports = {
             'react-dom',
             'redux' ,
             'react-redux',
-            'react-bootstrap',
             'superagent'
         ]
     },

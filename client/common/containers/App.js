@@ -1,21 +1,22 @@
-import React, { Component, Children, cloneElement } from 'react';
-import { bindActionCreators } from 'redux';
-import { connect } from 'react-redux';
-import Header from '../components/Header';
-import MainSection from '../components/MainSection';
-import * as actions from '../actions';
-import styles from '../sass/Root'
+import React, { Component, Children, cloneElement } from 'react'
+import { bindActionCreators } from 'redux'
+import { connect } from 'react-redux'
+import Header from '../components/Header'
+import MainSection from '../components/MainSection'
+import * as actions from '../actions'
+import styles from '../sass/App'
+import '../sass/global'
 
-class Root extends Component {
-    constructor(props, context) {
-        super(props, context);
+class App extends Component {
+    constructor(props) {
+        super(props)
     }
 
     render() {
-        const { children, orders, actions } = this.props;
+        const { children, orders, actions } = this.props
 
         return (
-            <div className={styles.root}>
+            <div className={styles.app}>
             	<Header />
             	<MainSection>
                 {
@@ -28,23 +29,23 @@ class Root extends Component {
                 }
                 </MainSection>
             </div>
-        );
+        )
     }
 }
 
 function mapStateToProps(state) {
     return {
         orders: state.orders
-    };
+    }
 }
 
 function mapDispatchToProps(dispatch) {
     return {
         actions: bindActionCreators(actions, dispatch)
-    };
+    }
 }
 
 export default connect(
     mapStateToProps,
     mapDispatchToProps
-)(Root);
+)(App)

@@ -1,16 +1,16 @@
-import React, { Component } from 'react';
-import SideBar from './SideBar';
+import React, { Component } from 'react'
+import SideBar from './SideBar'
 import styles from '../sass/MainSection'
 
 class MainSection extends Component {
-    constructor(props, context) {
-        super(props, context);
+    constructor(props) {
+        super(props)
     }
 
     render() {
-        const { children } = this.props;
+        const { children } = this.props
         return (
-            <main className={styles.main}>
+            <main className={styles.mainSection}>
                 <div className={styles.left}>
                     <SideBar />
                 </div>
@@ -18,8 +18,8 @@ class MainSection extends Component {
                     {children}
                 </div>
             </main>
-        );
+        )
     }
 }
 
-export default MainSection;
+export default MainSection

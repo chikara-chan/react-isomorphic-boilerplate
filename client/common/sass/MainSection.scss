@@ -1,15 +1,12 @@
-.main {
-    height: 100%;
+.main-section {
     .left {
         position: fixed;
-        float: left;
+        top: 50px;
+        bottom: 0;
         width: 200px;
-        height:100%;
         background:#222d32;
     }
     .right {
-        min-height: 100%;
         margin-left: 200px;
-        background: #e6e7eb;
     }
 }

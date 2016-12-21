@@ -12,7 +12,7 @@
         line-height: 50px;
         .span {
             margin-left: 11px;
-            font-size: 26px;
+            font-size: 20px;
             color: #ffffff;
             letter-spacing: 1.62px;
             vertical-align: middle;
@@ -22,39 +22,19 @@
         height: 50px;
         margin-left: 200px;
         background: #378cbe;
+        line-height: 50px;
         .img{
             float: right;
             width:32px;
             height:32px;
-            margin-top: 9px;
             border-radius:100%;
+            margin-top: 9px;
+            margin-right:10px;
         }
-        .menu{
+        .description {
             float: right;
-            margin-top: 5px;
-            :global {
-                .dropdown-toggle{
-                    height: 40px;
-                    padding-right: 28px;
-                    color:#ffffff;
-                    line-height: 20px;
-                    background-color: inherit;
-                    &:hover {
-                        background: inherit;
-                    }
-                    .caret {
-                        margin-left: 5px;
-                    }
-                }
-                .dropdown-menu {
-                    min-width: 100%;
-                    a:hover {
-                        color: #262626;
-                        text-decoration: none;
-                        background-color: #f5f5f5;
-                    }
-                }
-            }
+            margin-right:10px;
+            color: #fff;
         }
     }
 }

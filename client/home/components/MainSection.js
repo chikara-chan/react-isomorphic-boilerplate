@@ -1,24 +1,20 @@
-import React, { Component } from 'react';
-import { Nav, NavItem, Checkbox, Alert } from 'react-bootstrap';
-import classnames from 'classnames';
+import React, { Component } from 'react'
 import styles from '../sass/MainSection'
 
 class MainSection extends Component {
-    constructor(props, context) {
-        super(props, context);
-        this.state = {
-        };
+    constructor(props) {
+        super(props)
     }
 
     render() {
-        const { orders, actions } = this.props;
+        const { orders, actions } = this.props
 
         return (
             <section className={styles.mainSection}>
-                    Home
+                Home
             </section>
-        );
+        )
     }
 }
 
-export default MainSection;
+export default MainSection

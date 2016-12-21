@@ -4,6 +4,7 @@ require('babel-register')({
 })
 require('css-modules-require-hook')({
     extensions: ['.scss'],
+    camelCase: true,
     generateScopedName: '[name]__[local]__[hash:base64:8]',
 })
 require('asset-require-hook')({

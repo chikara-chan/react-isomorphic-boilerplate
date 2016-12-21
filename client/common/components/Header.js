@@ -1,13 +1,10 @@
-import React, { Component } from 'react';
-import { NavDropdown, MenuItem, Nav } from 'react-bootstrap';
+import React, { Component } from 'react'
 import styles from '../sass/Header'
-import imgLogo from '../assets/logo.png';
-import imgMenu from '../assets/menu.png';
-import imgAvatar from '../assets/avatar.png';
+import imgAvatar from '../assets/avatar.png'
 
 class Header extends Component {
-    constructor(props, context) {
-        super(props, context);
+    constructor(props) {
+        super(props)
     }
 
     render() {
@@ -17,17 +14,12 @@ class Header extends Component {
                     <span className={styles.span}>Boilerplate</span>
             	</div>
             	<div className={styles.right}>
-                    <Nav className={styles.menu}>
-                        <NavDropdown eventKey="0"
-                                     title="Hello, world！">
-                            <MenuItem >注销</MenuItem>
-                        </NavDropdown>
-                    </Nav>
-            		<img className={styles.img} src={imgAvatar} />
+                    <span className={styles.description}>Hello, world！</span>
+                    <img className={styles.img} src={imgAvatar} />
             	</div>
             </header>
-        );
+        )
     }
 }
 
-export default Header;
+export default Header

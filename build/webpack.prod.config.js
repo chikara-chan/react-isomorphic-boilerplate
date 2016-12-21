@@ -22,7 +22,6 @@ const clientConfig = {
             'react-dom',
             'redux' ,
             'react-redux',
-            'react-bootstrap',
             'superagent'
         ]
     },

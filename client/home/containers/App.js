@@ -1,18 +1,20 @@
-import React, { Component } from 'react';
-import Header from '../components/Header';
-import MainSection from '../components/MainSection';
+import React, { Component } from 'react'
+import MainSection from '../components/MainSection'
 import styles from '../sass/App'
 
 class App extends Component {
+    constructor(props) {
+        super(props)
+    }
+
     render() {
-        const { orders, actions } = this.props;
+        const { orders, actions } = this.props
 
         return (
             <div className={styles.app}>
-                <Header />
                 <MainSection orders={orders} actions={actions}></MainSection>
             </div>
-        );
+        )
     }
 }
 
