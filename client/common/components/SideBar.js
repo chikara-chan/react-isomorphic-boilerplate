@@ -8,7 +8,6 @@ class SideBar extends Component {
     }
 
     render() {
-        const { children } = this.props
         return (
             <div className={styles.sideBar}>
                 <IndexLink className={styles.link} activeClassName={styles.active} to="">home</IndexLink>

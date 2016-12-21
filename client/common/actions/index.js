@@ -1,39 +1,20 @@
-import request from 'superagent'
-import * as types from '../constants/ActionTypes'
+import { REPLACE_USER_INFO } from '../constants/ActionTypes'
+import utils from '../../shared/utils'
 
-export function search(data) {
-  	return dispatch => {
-  		savedData = data
-	    request.post('/user')
-	        .send(data)
-	        .end((err, res) => {
-	            if (err) {
-	                alert('请求服务器异常')
-	            } else if (!res.status) {
-	                alert(res.message)
-	            } else {
-	            	dispatch({
-	                	type: types.SEARCH,
-	                	orders: [{
-		                    id: 1,
-		                    text: 'SECRET_DOM_DO_NOT_USE_OR_YOU_WILL_BE_FIRED'
-			            }, {
-			                id: 2,
-			                text: 'SECRET_DOM_DO_NOT_USE_OR_YOU_WILL_BE_FIRED'
-		                }]
-	            	})
-	            }
-	    	})
-    	dispatch({
-        	type: types.SEARCH,
-        	orders: [{
-                id: 1,
-                text: 'SECRET_DOM_DO_NOT_USE_OR_YOU_WILL_BE_FIRED'
-            }, {
-                id: 2,
-                text: 'SECRET_DOM_DO_NOT_USE_OR_YOU_WILL_BE_FIRED'
-            }]
-    	})
-  	}
+export function replaceUserInfo(userInfo) {
+    return {
+        type: REPLACE_USER_INFO,
+        userInfo
+    }
+}
+
+export function fetchUserInfo(data) {
+    return dispatch => {
+        utils.ajax({
+            url: '/api/user/getUserInfo'
+        }).then(res => {
+           dispatch(replaceUserInfo(res))
+        })
+    }
 }
 

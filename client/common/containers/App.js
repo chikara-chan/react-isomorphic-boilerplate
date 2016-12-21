@@ -13,7 +13,7 @@ class App extends Component {
     }
 
     render() {
-        const { children, orders, actions } = this.props
+        const { children, userInfo, actions } = this.props
 
         return (
             <div className={styles.app}>
@@ -22,7 +22,7 @@ class App extends Component {
                 {
                     Children.map(children, child =>
                         cloneElement(child, {
-                            orders,
+                            userInfo,
                             actions
                         })
                     )
@@ -35,7 +35,7 @@ class App extends Component {
 
 function mapStateToProps(state) {
     return {
-        orders: state.orders
+        userInfo: state.userInfo
     }
 }
 

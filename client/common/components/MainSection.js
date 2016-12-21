@@ -9,6 +9,7 @@ class MainSection extends Component {
 
     render() {
         const { children } = this.props
+
         return (
             <main className={styles.mainSection}>
                 <div className={styles.left}>

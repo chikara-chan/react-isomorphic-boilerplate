@@ -7,7 +7,7 @@ class MainSection extends Component {
     }
 
     render() {
-        const { orders, actions } = this.props
+        const { actions } = this.props
 
         return (
             <section className={styles.mainSection}>

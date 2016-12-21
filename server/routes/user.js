@@ -5,6 +5,6 @@ const router = new Router({
     prefix: '/user'
 })
 
-router.get('/getUserInfo', user.getUserInfo)
+router.post('/getUserInfo', user.getUserInfo)
 
 export default router

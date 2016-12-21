@@ -16,10 +16,11 @@ class Root extends Component {
 
     render() {
         const { isMounted } = this.state
+        const { children } = this.props
 
         return (
             <div>
-                <App/>
+                <App>{children}</App>
                 {isMounted && <DevTools />}
             </div>
         )

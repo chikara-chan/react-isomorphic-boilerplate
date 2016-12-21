@@ -1,3 +1,12 @@
 .main-section {
     font-size: 40px;
+    .btn {
+        display: inline-block;
+        margin-left: 20px;
+        padding: 3px 5px;
+        border: 1px solid #222d32;
+        text-decoration: none;
+        font-size: 14px;
+        color: #222d32;
+    }
 }

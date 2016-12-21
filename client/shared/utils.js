@@ -19,7 +19,7 @@ function ajax(options) {
 
     return new Promise(resolve => {
         promise.send(options['data']).then(res => {
-            resolve(res)
+            resolve(res.body)
         }).catch(err => {
             console.log(err)
         })
