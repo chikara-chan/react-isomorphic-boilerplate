@@ -3711,7 +3711,16 @@ reduce-function-call@^1.0.1:
   dependencies:
     balanced-match "^0.4.2"
 
-redux-devtools-dock-monitor@^1.1.1:
+redux-devtools:
+  version "3.3.1"
+  resolved "https://registry.yarnpkg.com/redux-devtools/-/redux-devtools-3.3.1.tgz#e2ed0b5335310935a25bbc73c60c09e522182850"
+  dependencies:
+    lodash "^4.2.0"
+    react-redux "^4.0.0"
+    redux "^3.5.2"
+    redux-devtools-instrument "^1.0.1"
+
+redux-devtools-dock-monitor:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/redux-devtools-dock-monitor/-/redux-devtools-dock-monitor-1.1.1.tgz#6ef4ff5a7c42f5d7fa39c34859a8f4eb4dee9947"
   dependencies:
@@ -3727,7 +3736,7 @@ redux-devtools-instrument@^1.0.1:
     lodash "^4.2.0"
     symbol-observable "^0.2.4"
 
-redux-devtools-log-monitor@^1.0.11:
+redux-devtools-log-monitor:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/redux-devtools-log-monitor/-/redux-devtools-log-monitor-1.1.1.tgz#6d6c731e239934e4306765c256d9e1c1efd72e3c"
   dependencies:
@@ -3741,15 +3750,6 @@ redux-devtools-themes@^1.0.0:
   resolved "https://registry.yarnpkg.com/redux-devtools-themes/-/redux-devtools-themes-1.0.0.tgz#c482dce3c5373976045f40134907d9dcb3ae3d5d"
   dependencies:
     base16 "^1.0.0"
-
-redux-devtools@^3.3.1:
-  version "3.3.1"
-  resolved "https://registry.yarnpkg.com/redux-devtools/-/redux-devtools-3.3.1.tgz#e2ed0b5335310935a25bbc73c60c09e522182850"
-  dependencies:
-    lodash "^4.2.0"
-    react-redux "^4.0.0"
-    redux "^3.5.2"
-    redux-devtools-instrument "^1.0.1"
 
 redux-thunk@^2.1.0:
   version "2.1.0"
