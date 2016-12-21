@@ -14,16 +14,12 @@ class Header extends Component {
         return (
             <header className={styles.header}>
             	<div className={styles.left}>
-                    <img className={styles.img1}
-                         src={imgLogo} />
-                    <span className={styles.span}>CRM</span>
-                    <img className={styles.img2}
-                         src={imgMenu} />
+                    <span className={styles.span}>Boilerplate</span>
             	</div>
             	<div className={styles.right}>
                     <Nav className={styles.menu}>
                         <NavDropdown eventKey="0"
-                                     title="你好，张三！">
+                                     title="Hello, world！">
                             <MenuItem >注销</MenuItem>
                         </NavDropdown>
                     </Nav>

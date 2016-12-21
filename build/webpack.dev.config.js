@@ -16,6 +16,7 @@ module.exports = {
             'react-dom',
             'redux' ,
             'react-redux',
+            'react-bootstrap',
             'superagent'
         ]
     },
@@ -47,9 +48,6 @@ module.exports = {
             test: /\.json$/,
             loader: 'json'
         }]
-    },
-    externals: {
-        'react-bootstrap': 'window.ReactBootstrap',
     },
     resolve: {
         extensions: ['', '.js', '.json', '.scss']

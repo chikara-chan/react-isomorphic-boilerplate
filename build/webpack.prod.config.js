@@ -22,6 +22,7 @@ const clientConfig = {
             'react-dom',
             'redux' ,
             'react-redux',
+            'react-bootstrap',
             'superagent'
         ]
     },
@@ -49,9 +50,6 @@ const clientConfig = {
     postcss: [autoprefixer({
         browsers: ['> 5%']
     })],
-    externals: {
-        'react-bootstrap': 'window.ReactBootstrap'
-    },
     resolve: {
         extensions: ['', '.js', '.json', '.scss']
     },
