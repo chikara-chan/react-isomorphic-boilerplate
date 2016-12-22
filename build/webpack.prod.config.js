@@ -47,6 +47,9 @@ const clientConfig = {
             test: /\.(jpg|png|gif|webp)$/,
             loader: 'url?limit=8000'
         }, {
+            test: /\.json$/,
+            loader: 'json'
+        }, {
             test: /\.html$/,
             loader: 'html?minimize=false'
         }]

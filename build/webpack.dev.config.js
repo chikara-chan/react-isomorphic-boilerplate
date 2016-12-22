@@ -69,9 +69,8 @@ module.exports = {
         }),
         new HtmlWebpackPlugin({
             filename: '../server/views/index.html',
-            template: './server/views/tpl/index.tpl.html',
-            chunksSortMode: 'none'
+            template: './server/views/tpl/index.tpl.html'
         }),
-        new ProgressBarPlugin({ summary: false }),
+        new ProgressBarPlugin({ summary: false })
     ],
 }
