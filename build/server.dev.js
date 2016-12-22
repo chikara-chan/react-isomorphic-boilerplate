@@ -1,7 +1,12 @@
+// Provide custom regenerator runtime and core-js
 require('babel-polyfill')
+
+// Javascript require hook
 require('babel-register')({
     presets: ['es2015', 'react', 'stage-0']
 })
+
+// Css require hook
 require('css-modules-require-hook')({
     extensions: ['.scss'],
     preprocessCss: (data, filename) =>
@@ -12,6 +17,8 @@ require('css-modules-require-hook')({
     camelCase: true,
     generateScopedName: '[name]__[local]__[hash:base64:8]',
 })
+
+// Image require hook
 require('asset-require-hook')({
     extensions: ['jpg', 'png', 'gif', 'webp'],
     limit: 8000
