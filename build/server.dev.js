@@ -29,6 +29,7 @@ const config = require('./webpack.dev.config')
 const port = 3000
 const compiler = webpack(config)
 
+// Webpack hook event to write html file into /server/views due to server render
 compiler.plugin('emit', (compilation, callback) => {
     const assets = compilation.assets
     let file, data
