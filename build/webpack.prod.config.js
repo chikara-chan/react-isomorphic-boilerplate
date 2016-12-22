@@ -17,7 +17,7 @@ function getExternals() {
 const clientConfig = {
     context: path.resolve(__dirname, '..'),
     entry: {
-        'index': './client',
+        'bundle': './client',
         'vendor': [
             'react',
             'react-dom',
@@ -69,10 +69,10 @@ const clientConfig = {
         new webpack.DefinePlugin({
             'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
         }),
-        new HtmlWebpackPlugin({
-          filename: 'index.html',
-          template: './server/views/index.tpl.html'
-        })，
+        // new HtmlWebpackPlugin({
+        //     filename: '../server/views/index.html',
+        //     template: './server/views/tpl/index.tpl.html'
+        // }),
         new ExtractTextPlugin('[name].[contenthash:8].css')
     ],
 }

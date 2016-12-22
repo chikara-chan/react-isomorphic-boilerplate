@@ -8,10 +8,15 @@
         <link href="http://cdn.52shangou.com/f2e/bootstrap/3.3.7/build/css/bootstrap.min.css" rel="stylesheet">
         <link href="http://cdn.52shangou.com/f2e/font-awesome/4.6.3/build/css/font-awesome.min.css" rel="stylesheet">
         <link href="http://cdn.52shangou.com/f2e/react-bootstrap-datetimepicker/0.0.22/build/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
+        <link href="./index.css" rel="stylesheet">
     </head>
     <body>
-        <div id="root"></div>
+        <div id="root"><%- root %></div>
+        <script src="./manifest.js"></script>
+        <script src="./vendor.js"></script>
+        <script src="./index.js"></script>
         <script>
+            window.REDUX_STATE = <%- JSON.stringify(state) %>
         </script>
     </body>
 </html>
