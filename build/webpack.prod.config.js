@@ -2,6 +2,7 @@ const path = require('path')
 const fs = require('fs')
 const webpack = require('webpack')
 const autoprefixer = require('autoprefixer')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 function getExternals() {
@@ -68,6 +69,10 @@ const clientConfig = {
         new webpack.DefinePlugin({
             'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
         }),
+        new HtmlWebpackPlugin({
+          filename: 'index.html',
+          template: './server/views/index.tpl.html'
+        })，
         new ExtractTextPlugin('[name].[contenthash:8].css')
     ],
 }

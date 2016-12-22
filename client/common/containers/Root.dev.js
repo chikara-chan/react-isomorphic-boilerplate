@@ -11,7 +11,10 @@ class Root extends Component {
     }
 
     componentDidMount() {
-        this.setState({ isMounted: true })
+        this.setState({
+            isMounted: true
+        })
+        console.log('Redux Devtools is now available. Press key "ctrl-h" to toggleVisibility. Press key "ctrl-w" to changePosition.')
     }
 
     render() {

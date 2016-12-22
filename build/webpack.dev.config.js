@@ -1,7 +1,8 @@
 const path = require('path')
 const webpack = require('webpack')
 const autoprefixer = require('autoprefixer')
-const ProgressBarPlugin = require('progress-bar-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const ProgressBarPlugin = require('progress-bar-webpack-plugin')
 
 module.exports = {
     devtool: 'eval-source-map',
@@ -62,6 +63,10 @@ module.exports = {
         new webpack.NoErrorsPlugin(),
         new webpack.DefinePlugin({
             'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
+        }),
+        new HtmlWebpackPlugin({
+          filename: 'index.html',
+          template: './server/views/index.tpl.html'
         }),
         new ProgressBarPlugin({ summary: false }),
     ],
