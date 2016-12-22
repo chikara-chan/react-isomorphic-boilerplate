@@ -5,7 +5,7 @@ An universal React isomorphic boilerplate for building server side render web ap
 
 ## Introduction
 
-This repository is an universal React isomorphic boilerplate for developer to quickly build a super fast and powerfull web app that can be rendered both on the client and on the server using the most cutting-edge technology. Compared to others, this boilerplate has more pithily and more elegant configuration file divided by environment variables, one for development, one for production. In addition, the directory structure is organized corresponding to MVC principle aim at bring developer the best developing experience.
+This repository is an universal React isomorphic boilerplate for developer to quickly build a super fast and powerfull web app that can be rendered both on the client and on the server using the most cutting-edge technology. Compared to others, this boilerplate has more pithily and more elegant configuration file divided by environment variables, one for development, one for production. In addition, the directory structure is organized corresponding to mvc principle aim at bring developer the best developing experience.
 
 ## Technology Stack
 
@@ -78,6 +78,12 @@ By the same token, if the server doesn’t render a full page of HTML but instea
 ###Maintainability
 
 While the ideal case can lead to a nice, clean separation of concerns, inevitably some bits of application logic or view logic end up duplicated between client and server, often in different languages. Common examples are date and currency formatting, form validations, and routing logic. This makes maintenance a nightmare, especially for more complex apps.
+
+## Problem exists yet
+
+####[FOUC](https://www.google.com.hk/url?sa=t&rct=j&q=&esrc=s&source=web&cd=2&ved=0ahUKEwimhPqTrofRAhXHkJQKHTEYCfMQFggjMAE&url=https%3a%2f%2fen%2ewikipedia%2eorg%2fwiki%2fFlash_of_unstyled_content&usg=AFQjCNGjAnNtZtjPb5oLsT9Wlf9az7hXTw)
+
+It happens when run in developemnt mode. This is caused by deprecated using [extract-text-webpack-plugin](https://github.com/webpack/extract-text-webpack-plugin/issues/30) for getting a seamless hmr development experience. If you are not an OCD, go ahead, ignore it.
 
 ## Author
 
