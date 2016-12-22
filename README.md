@@ -28,7 +28,7 @@ This repository is an universal React isomorphic boilerplate for developer to qu
 - `npm install` to install dependencies and devDependencies.
 - `npm run dev` to start up the development environment.
 - `npm run build` to compile and bundle the client and server files.
-- `npm run serve` to depoly the production server.
+- `npm start` to depoly the production server.
 
 ## What's included
 
