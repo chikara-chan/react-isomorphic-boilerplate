@@ -69,7 +69,7 @@ react-isomorphic-boilerplate/                // root directory
 
 ###SEO
 
-An application that can only run in the client-side cannot serve HTML to crawlers, so it will have poor SEO by default. Web crawlers function by making a request to a web server and interpreting the result. but if the server returns a blank page, it’s not of much value. There are workarounds, but not without jumping through some hoops.
+An application that can only run in the client-side cannot serve HTML to crawlers, so it will have poor [SEO](https://en.wikipedia.org/wiki/Search_engine_optimization) by default. Web crawlers function by making a request to a web server and interpreting the result. but if the server returns a blank page, it’s not of much value. There are workarounds, but not without jumping through some hoops.
 
 ###Performance
 
@@ -83,7 +83,7 @@ While the ideal case can lead to a nice, clean separation of concerns, inevitabl
 
 ####[FOUC](https://www.google.com.hk/url?sa=t&rct=j&q=&esrc=s&source=web&cd=2&ved=0ahUKEwimhPqTrofRAhXHkJQKHTEYCfMQFggjMAE&url=https%3a%2f%2fen%2ewikipedia%2eorg%2fwiki%2fFlash_of_unstyled_content&usg=AFQjCNGjAnNtZtjPb5oLsT9Wlf9az7hXTw)
 
-It happens when run in developemnt mode. This is caused by deprecated using [extract-text-webpack-plugin](https://github.com/webpack/extract-text-webpack-plugin/issues/30) in development for getting a seamless hmr experience. If you are not an OCD, go ahead, ignore it.
+It happens when run in developemnt mode. This is caused by deprecated using [extract-text-webpack-plugin](https://github.com/webpack/extract-text-webpack-plugin) in development for getting a seamless hmr experience.(Why deprecated? See this [Issue](https://github.com/webpack/extract-text-webpack-plugin/issues/30)) If you are not an OCD, go ahead, ignore it.
 
 ## Author
 
