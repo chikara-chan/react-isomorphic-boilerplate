@@ -2,7 +2,8 @@ import React, { Component, Children, cloneElement } from 'react'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import Header from '../components/Header'
-import MainSection from '../components/MainSection'
+import Navbar from '../components/Navbar'
+import Main from '../components/Main'
 import * as actions from '../actions'
 import styles from '../sass/App'
 import '../sass/global'
@@ -17,17 +18,16 @@ class App extends Component {
 
         return (
             <div className={styles.app}>
-            	<Header />
-            	<MainSection>
-                {
-                    Children.map(children, child =>
+            	<Header/>
+                <Navbar/>
+            	<Main>
+                    {Children.map(children, child =>
                         cloneElement(child, {
                             userInfo,
                             actions
                         })
-                    )
-                }
-                </MainSection>
+                    )}
+                </Main>
             </div>
         )
     }

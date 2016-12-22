@@ -56,7 +56,7 @@ const clientConfig = {
         new webpack.optimize.OccurrenceOrderPlugin(),
         new webpack.optimize.DedupePlugin(),
         new webpack.optimize.CommonsChunkPlugin({
-            name: ['vendor', 'mainifest'],
+            names: ['vendor', 'mainifest'],
             filename: '[name].[chunkhash:8].js'
         }),
         new webpack.optimize.UglifyJsPlugin({

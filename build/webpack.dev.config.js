@@ -55,7 +55,7 @@ module.exports = {
         new webpack.optimize.OccurenceOrderPlugin(),
         new webpack.optimize.DedupePlugin(),
         new webpack.optimize.CommonsChunkPlugin({
-            name: 'vendor',
+            names: ['vendor', 'mainifest'],
             filename: '[name].js'
         }),
         new webpack.HotModuleReplacementPlugin(),

@@ -21,7 +21,7 @@ class Root extends Component {
         return (
             <div>
                 <App>{children}</App>
-                {isMounted && <DevTools />}
+                {isMounted && <DevTools/>}
             </div>
         )
     }

@@ -15,7 +15,7 @@ class Header extends Component {
             	</div>
             	<div className={styles.right}>
                     <span className={styles.description}>Hello, world！</span>
-                    <img className={styles.img} src={imgAvatar} />
+                    <img className={styles.img} src={imgAvatar}/>
             	</div>
             </header>
         )
