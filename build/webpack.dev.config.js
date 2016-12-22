@@ -35,9 +35,6 @@ module.exports = {
                 'plugins': ['transform-runtime']
             }
         }, {
-            test: /\.(jpg|png|gif|webp)$/,
-            loader: 'url?limit=8000'
-        }, {
             test: /\.scss$/,
             loaders: [
                 'style',
@@ -45,8 +42,14 @@ module.exports = {
                 'sass'
             ]
         }, {
+            test: /\.(jpg|png|gif|webp)$/,
+            loader: 'url?limit=8000'
+        }, {
             test: /\.json$/,
             loader: 'json'
+        }, {
+            test: /\.html$/,
+            loader: 'html?minimize=false'
         }]
     },
     resolve: {
@@ -65,8 +68,9 @@ module.exports = {
             'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
         }),
         new HtmlWebpackPlugin({
-          filename: 'index.html',
-          template: './server/views/tpl/index.tpl.html'
+            filename: '../server/views/index.html',
+            template: './server/views/tpl/index.tpl.html',
+            chunksSortMode: 'none'
         }),
         new ProgressBarPlugin({ summary: false }),
     ],

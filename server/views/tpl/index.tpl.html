@@ -10,8 +10,9 @@
         <link href="http://cdn.52shangou.com/f2e/react-bootstrap-datetimepicker/0.0.22/build/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
     </head>
     <body>
-        <div id="root"></div>
+        <div id="root"><%- root %></div>
         <script>
+            window.REDUX_STATE = <%- JSON.stringify(state) %>
         </script>
     </body>
 </html>

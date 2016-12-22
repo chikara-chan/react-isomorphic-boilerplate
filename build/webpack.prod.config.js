@@ -28,7 +28,8 @@ const clientConfig = {
     },
     output: {
         path: path.resolve(__dirname, '../dist'),
-        filename: '[name].[chunkhash:8].js'
+        filename: '[name].[chunkhash:8].js',
+        publicPath: './'
     },
     module: {
         loaders: [{
@@ -40,11 +41,14 @@ const clientConfig = {
                 'plugins': ['transform-runtime']
             }
         }, {
+            test: /\.scss$/,
+            loader: ExtractTextPlugin.extract('style', 'css?modules&camelCase&localIdentName=[hash:base64:8]!postcss!sass')
+        }, {
             test: /\.(jpg|png|gif|webp)$/,
             loader: 'url?limit=8000'
         }, {
-            test: /\.scss$/,
-            loader: ExtractTextPlugin.extract('style', 'css?modules&camelCase&localIdentName=[hash:base64:8]!postcss!sass')
+            test: /\.html$/,
+            loader: 'html?minimize=false'
         }]
     },
     postcss: [autoprefixer({
@@ -69,10 +73,11 @@ const clientConfig = {
         new webpack.DefinePlugin({
             'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
         }),
-        // new HtmlWebpackPlugin({
-        //     filename: '../server/views/index.html',
-        //     template: './server/views/tpl/index.tpl.html'
-        // }),
+        new HtmlWebpackPlugin({
+            filename: '../server/views/index.html',
+            template: './server/views/tpl/index.tpl.html',
+            chunksSortMode: 'none'
+        }),
         new ExtractTextPlugin('[name].[contenthash:8].css')
     ],
 }
@@ -100,14 +105,14 @@ const serverConfig = {
                 'presets': ['es2015', 'react', 'stage-0']
             }
         }, {
-            test: /\.(jpg|png|gif|webp)$/,
-            loader: 'url?limit=8000'
-        }, {
             test: /\.scss$/,
             loaders: [
                 'css/locals?modules&camelCase&localIdentName=[hash:base64:8]',
                 'sass'
             ]
+        }, {
+            test: /\.(jpg|png|gif|webp)$/,
+            loader: 'url?limit=8000'
         }, {
             test: /\.json$/,
             loader: 'json'
