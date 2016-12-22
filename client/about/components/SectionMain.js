@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import styles from '../sass/MainSection'
+import styles from '../sass/SectionMain'
 
-class MainSection extends Component {
+class SectionMain extends Component {
     constructor(props) {
         super(props)
     }
@@ -10,11 +10,11 @@ class MainSection extends Component {
         const { actions } = this.props
 
         return (
-            <section className={styles.mainSection}>
+            <section className={styles.sectionMain}>
                 About
             </section>
         )
     }
 }
 
-export default MainSection
+export default SectionMain

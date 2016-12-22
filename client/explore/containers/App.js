@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import MainSection from '../components/MainSection'
+import SectionMain from '../components/SectionMain'
 import styles from '../sass/App'
 
 class App extends Component {
@@ -11,9 +11,9 @@ class App extends Component {
         const { userInfo, actions } = this.props
 
         return (
-            <div className={styles.app}>
-                <MainSection userInfo={userInfo} actions={actions}></MainSection>
-            </div>
+            <section className={styles.app}>
+                <SectionMain userInfo={userInfo} actions={actions}></SectionMain>
+            </section>
         )
     }
 }
