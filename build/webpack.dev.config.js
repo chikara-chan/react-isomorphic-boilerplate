@@ -1,8 +1,8 @@
-const path = require('path')
-const webpack = require('webpack')
-const autoprefixer = require('autoprefixer')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const ProgressBarPlugin = require('progress-bar-webpack-plugin')
+const path = require('path'),
+    webpack = require('webpack'),
+    autoprefixer = require('autoprefixer'),
+    HtmlWebpackPlugin = require('html-webpack-plugin'),
+    ProgressBarPlugin = require('progress-bar-webpack-plugin')
 
 module.exports = {
     devtool: 'eval-source-map',

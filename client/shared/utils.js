@@ -1,5 +1,9 @@
 import request from 'superagent'
 
+/**
+ * @param  {Object} options
+ * @return {Promise}
+ */
 function ajax(options) {
     const defaults = {
         'type': 'post',
@@ -26,6 +30,11 @@ function ajax(options) {
     })
 }
 
+/**
+ * @param  {number} timestamp
+ * @param  {String} format
+ * @return {String}
+ */
 function formatDate(timestamp, format) {
     const date = new Date(timestamp)
     const years = date.getFullYear().toString()
@@ -55,6 +64,10 @@ function formatDate(timestamp, format) {
     })
 }
 
+/**
+ * @param  {String} str
+ * @return {Date}
+ */
 function parseDate(str) {
     let results
 
@@ -65,6 +78,9 @@ function parseDate(str) {
     }
 }
 
+/**
+ * @return {Object}
+ */
 function getUrlParams() {
     const search = location.search.slice(1)
     const rParam = /([^&]*)=([^&]*)/g

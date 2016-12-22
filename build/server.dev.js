@@ -24,17 +24,16 @@ require('asset-require-hook')({
     limit: 8000
 })
 
-const app = require('../server/app.js').default
-const convert = require('koa-convert')
-const webpack = require('webpack')
-const fs = require('fs')
-const path = require('path')
-const devMiddleware = require('koa-webpack-dev-middleware')
-const hotMiddleware = require('koa-webpack-hot-middleware')
-const config = require('./webpack.dev.config')
-
-const port = 3000
-const compiler = webpack(config)
+const app = require('../server/app.js').default,
+    convert = require('koa-convert'),
+    webpack = require('webpack'),
+    fs = require('fs'),
+    path = require('path'),
+    devMiddleware = require('koa-webpack-dev-middleware'),
+    hotMiddleware = require('koa-webpack-hot-middleware'),
+    config = require('./webpack.dev.config'),
+    port = 3000,
+    compiler = webpack(config)
 
 // Webpack hook event to write html file into /server/views due to server render
 compiler.plugin('emit', (compilation, callback) => {

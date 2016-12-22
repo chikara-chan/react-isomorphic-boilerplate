@@ -1,9 +1,9 @@
-const path = require('path')
-const fs = require('fs')
-const webpack = require('webpack')
-const autoprefixer = require('autoprefixer')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const path = require('path'),
+    fs = require('fs'),
+    webpack = require('webpack'),
+    autoprefixer = require('autoprefixer'),
+    HtmlWebpackPlugin = require('html-webpack-plugin'),
+    ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 function getExternals() {
     return fs.readdirSync(path.resolve(__dirname, '../node_modules'))
