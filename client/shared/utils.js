@@ -101,7 +101,8 @@ export default {
     getUrlParams
 }
 
-var a = [1,3,5]
+var a = [1, 3, 5]
+a['as'] = 1
 a()
     .v()
     .v()

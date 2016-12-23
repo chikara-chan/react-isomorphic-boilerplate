@@ -6,7 +6,7 @@
     "dev": "NODE_ENV=development nodemon build/server.dev.js --watch server --watch build",
     "build": "npm run clean && NODE_ENV=production webpack --config ./build/webpack.prod.config.js --progress",
     "clean": "rm -rf ./dist && rm -f ./server.js && rm -rf ./server/views/*.*",
-    "lint": "eslint ./ --ext .js",
+    "lint": "eslint . --ext .js",
     "start": "node ./server.js"
   },
   "dependencies": {

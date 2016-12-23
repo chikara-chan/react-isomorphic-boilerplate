@@ -21,7 +21,7 @@ const clientConfig = {
         'vendor': [
             'react',
             'react-dom',
-            'redux' ,
+            'redux',
             'react-redux',
             'superagent'
         ]

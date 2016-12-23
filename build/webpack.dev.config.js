@@ -14,7 +14,7 @@ module.exports = {
         'vendor': [
             'react',
             'react-dom',
-            'redux' ,
+            'redux',
             'react-redux',
             'superagent'
         ]
