@@ -6,9 +6,9 @@ import request from 'superagent'
  */
 function ajax(options) {
     const defaults = {
-        'type': 'post',
-        'url': null,
-        'data': {},
+        type: 'post',
+        url: null,
+        data: {},
         'Content-Type': 'application/json'
     }
     let promise
@@ -36,13 +36,13 @@ function ajax(options) {
  * @return {String}
  */
 function formatDate(timestamp, format) {
-    const date = new Date(timestamp)
-    const years = date.getFullYear().toString()
-    const month = date.getMonth().toString()
-    const day = date.getDate().toString()
-    const hours = date.getMonth().toString()
-    const minutes = date.getMinutes().toString()
-    const seconds = date.getSeconds().toString()
+    const date = new Date(timestamp),
+        years = date.getFullYear().toString(),
+        month = date.getMonth().toString(),
+        day = date.getDate().toString(),
+        hours = date.getMonth().toString(),
+        minutes = date.getMinutes().toString(),
+        seconds = date.getSeconds().toString()
 
     return format.replace(/y+|M+|d+|h+|m+|s+/g, match => {
         const length = match.length
@@ -51,15 +51,15 @@ function formatDate(timestamp, format) {
             case 'y':
                 return years.substr(-length)
             case 'M':
-                return (month.length === 1 ? '0' + month : month).substr(-length)
+                return (month.length === 1 ? `0${month}` : month).substr(-length)
             case 'd':
-                return (day.length === 1 ? '0' + day : day).substr(-length)
+                return (day.length === 1 ? `0${day}` : day).substr(-length)
             case 'h':
-                return (hours.length === 1 ? '0' + hours : hours).substr(-length)
+                return (hours.length === 1 ? `0${hours}` : hours).substr(-length)
             case 'm':
-                return (minutes.length === 1 ? '0' + minutes : minutes).substr(-length)
+                return (minutes.length === 1 ? `0${minutes}` : minutes).substr(-length)
             case 's':
-                return (seconds.length === 1 ? '0' + seconds : seconds).substr(-length)
+                return (seconds.length === 1 ? `0${seconds}` : seconds).substr(-length)
         }
     })
 }
@@ -82,10 +82,10 @@ function parseDate(str) {
  * @return {Object}
  */
 function getUrlParams() {
-    const search = location.search.slice(1)
-    const rParam = /([^&]*)=([^&]*)/g
-    let ret = {}
-    let param
+    const search = location.search.slice(1),
+        rParam = /([^&]*)=([^&]*)/g
+    let ret = {},
+        param
 
     while (param = rParam.exec(search)) {
         ret[param[1]] = param[2]
@@ -101,19 +101,23 @@ export default {
     getUrlParams
 }
 
-var a = [1, 3, 5]
+let a = [1, 3, 5],
+    e,
+    c = () => 1
+const p = 1
 
+console.log(`${c} ${p}`)
+console.log(e)
+console.log(p)
 a.as = new Date()
-a ={
-    key: 'asd', asd: 'adfsdf'
-}
+a = {key: 'asd'}
 a().v()
-function b () {
-    return 1===1
+function b() {
+    return 1 === 1
 }
 
 // Asdasd
-if (a>1) {
+if (a > 1) {
     return a
 }
 console.log(a + b)

@@ -1,4 +1,4 @@
-import { REPLACE_USER_INFO } from '../constants/ActionTypes'
+import {REPLACE_USER_INFO} from '../constants/ActionTypes'
 import utils from '../../shared/utils'
 
 export function replaceUserInfo(userInfo) {
@@ -10,9 +10,7 @@ export function replaceUserInfo(userInfo) {
 
 export function fetchUserInfo() {
     return dispatch => {
-        utils.ajax({
-            url: '/api/user/getUserInfo'
-        }).then(res => {
+        utils.ajax({url: '/api/user/getUserInfo'}).then(res => {
             dispatch(replaceUserInfo(res))
         })
     }

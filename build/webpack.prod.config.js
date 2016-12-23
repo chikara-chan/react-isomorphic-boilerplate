@@ -4,6 +4,7 @@ const path = require('path'),
     autoprefixer = require('autoprefixer'),
     HtmlWebpackPlugin = require('html-webpack-plugin'),
     ExtractTextPlugin = require('extract-text-webpack-plugin')
+let clientConfig, serverConfig
 
 function getExternals() {
     return fs.readdirSync(path.resolve(__dirname, '../node_modules'))
@@ -15,11 +16,11 @@ function getExternals() {
         }, {})
 }
 
-const clientConfig = {
+clientConfig = {
     context: path.resolve(__dirname, '..'),
     entry: {
-        'bundle': './client',
-        'vendor': [
+        bundle: './client',
+        vendor: [
             'react',
             'react-dom',
             'redux',
@@ -38,8 +39,8 @@ const clientConfig = {
             exclude: /(node_modules)/,
             loader: 'babel',
             query: {
-                'presets': ['es2015', 'react', 'stage-0'],
-                'plugins': ['transform-runtime']
+                presets: ['es2015', 'react', 'stage-0'],
+                plugins: ['transform-runtime']
             }
         }, {
             test: /\.scss$/,
@@ -55,12 +56,8 @@ const clientConfig = {
             loader: 'html?minimize=false'
         }]
     },
-    postcss: [autoprefixer({
-        browsers: ['> 5%']
-    })],
-    resolve: {
-        extensions: ['', '.js', '.json', '.scss']
-    },
+    postcss: [autoprefixer({browsers: ['> 5%']})],
+    resolve: {extensions: ['', '.js', '.json', '.scss']},
     plugins: [
         new webpack.optimize.OccurrenceOrderPlugin(),
         new webpack.optimize.DedupePlugin(),
@@ -69,14 +66,10 @@ const clientConfig = {
             filename: '[name].[chunkhash:8].js'
         }),
         new webpack.optimize.UglifyJsPlugin({
-            compress: {
-                warnings: false
-            },
+            compress: {warnings: false},
             comments: false
         }),
-        new webpack.DefinePlugin({
-            'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
-        }),
+        new webpack.DefinePlugin({'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)}),
         new HtmlWebpackPlugin({
             filename: '../server/views/index.html',
             template: './server/views/tpl/index.tpl.html',
@@ -86,11 +79,9 @@ const clientConfig = {
     ]
 }
 
-const serverConfig = {
+serverConfig = {
     context: path.resolve(__dirname, '..'),
-    entry: {
-        'server': './server/index'
-    },
+    entry: {server: './server/index'},
     output: {
         path: path.resolve(__dirname, '..'),
         filename: '[name].js'
@@ -105,9 +96,7 @@ const serverConfig = {
             test: /\.js$/,
             exclude: /node_modules/,
             loader: 'babel',
-            query: {
-                'presets': ['es2015', 'react', 'stage-0']
-            }
+            query: {presets: ['es2015', 'react', 'stage-0']}
         }, {
             test: /\.scss$/,
             loaders: [
@@ -123,21 +112,15 @@ const serverConfig = {
         }]
     },
     externals: getExternals(),
-    resolve: {
-        extensions: ['', '.js', '.json', '.scss']
-    },
+    resolve: {extensions: ['', '.js', '.json', '.scss']},
     plugins: [
         new webpack.optimize.OccurrenceOrderPlugin(),
         new webpack.optimize.DedupePlugin(),
         new webpack.optimize.UglifyJsPlugin({
-            compress: {
-                warnings: false
-            },
+            compress: {warnings: false},
             comments: false
         }),
-        new webpack.DefinePlugin({
-            'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
-        })
+        new webpack.DefinePlugin({'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)})
     ]
 }
 

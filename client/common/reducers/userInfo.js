@@ -1,4 +1,4 @@
-import { REPLACE_USER_INFO } from '../constants/ActionTypes'
+import {REPLACE_USER_INFO} from '../constants/ActionTypes'
 
 export default function userInfo(state = null, action) {
     switch (action.type) {

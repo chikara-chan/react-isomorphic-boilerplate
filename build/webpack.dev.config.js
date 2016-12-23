@@ -7,11 +7,11 @@ module.exports = {
     devtool: 'eval-source-map',
     context: path.resolve(__dirname, '..'),
     entry: {
-        'bundle': [
+        bundle: [
             './client',
             'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000'
         ],
-        'vendor': [
+        vendor: [
             'react',
             'react-dom',
             'redux',
@@ -30,8 +30,8 @@ module.exports = {
             exclude: /node_modules/,
             loader: 'babel',
             query: {
-                'presets': ['es2015', 'react', 'stage-0', 'react-hmre'],
-                'plugins': ['transform-runtime']
+                presets: ['es2015', 'react', 'stage-0', 'react-hmre'],
+                plugins: ['transform-runtime']
             }
         }, {
             test: /\.scss$/,
@@ -51,9 +51,7 @@ module.exports = {
             loader: 'html?minimize=false'
         }]
     },
-    resolve: {
-        extensions: ['', '.js', '.json', '.scss']
-    },
+    resolve: {extensions: ['', '.js', '.json', '.scss']},
     plugins: [
         new webpack.optimize.OccurenceOrderPlugin(),
         new webpack.optimize.DedupePlugin(),
@@ -63,13 +61,11 @@ module.exports = {
         }),
         new webpack.HotModuleReplacementPlugin(),
         new webpack.NoErrorsPlugin(),
-        new webpack.DefinePlugin({
-            'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
-        }),
+        new webpack.DefinePlugin({'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)}),
         new HtmlWebpackPlugin({
             filename: '../server/views/index.html',
             template: './server/views/tpl/index.tpl.html'
         }),
-        new ProgressBarPlugin({ summary: false })
+        new ProgressBarPlugin({summary: false})
     ]
 }

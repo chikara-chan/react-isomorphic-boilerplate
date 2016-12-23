@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, {Component} from 'react'
 import SectionMain from '../components/SectionMain'
 import styles from '../sass/App'
 
@@ -8,7 +8,7 @@ class App extends Component {
     }
 
     render() {
-        const { userInfo, actions } = this.props
+        const {userInfo, actions} = this.props
 
         return (
             <section className={styles.app}>

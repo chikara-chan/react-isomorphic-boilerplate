@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, {Component} from 'react'
 import styles from '../sass/Main'
 
 class Main extends Component {
@@ -7,7 +7,7 @@ class Main extends Component {
     }
 
     render() {
-        const { children } = this.props
+        const {children} = this.props
 
         return (
             <main className={styles.main}>

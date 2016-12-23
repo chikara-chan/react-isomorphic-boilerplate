@@ -19,11 +19,7 @@ app.use(compress())
 app.use(bodyParser())
 app.use(json())
 app.use(logger())
-app.use(views(path.join(__dirname, 'views'), {
-    map: {
-        html: 'ejs'
-    }
-}))
+app.use(views(path.join(__dirname, 'views'), {map: {html: 'ejs'}}))
 app.use(middlewares)
 app.use(router.routes())
 app.use(router.allowedMethods())

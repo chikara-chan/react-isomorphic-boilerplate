@@ -16,6 +16,9 @@
     },
     "rules": {
         "array-bracket-spacing": ["error"],
+        "arrow-body-style": ["error", "as-needed"],
+        "arrow-parens": ["error", "as-needed"],
+        "arrow-spacing": ["error"],
         "block-spacing": ["error"],
         "brace-style": ["error"],
         "camelcase": ["error"],
@@ -31,6 +34,7 @@
         "eqeqeq": ["error"],
         "func-call-spacing": ["error"],
         "func-name-matching": ["error"],
+        "generator-star-spacing": ["error"],
         "indent": ["error", 4, {
             "SwitchCase": 1,
             "MemberExpression": 1
@@ -59,12 +63,38 @@
         "no-redeclare": ["error"],
         "no-trailing-spaces": ["error"],
         "no-undef-init": ["error"],
+        "no-useless-computed-key": ["error"],
+        "no-useless-rename": ["error"],
         "no-useless-return": ["error"],
+        "no-var": ["error"],
         "no-whitespace-before-property": ["error"],
+        "object-curly-newline": ["error"],
+        "object-curly-spacing": ["error"],
+        "object-shorthand": ["error"],
+        "operator-assignment": ["error"],
+        "one-var": ["error"],
+        "one-var-declaration-per-line": ["error"],
+        "padded-blocks": ["error", "never"],
+        "prefer-arrow-callback": ["error"],
+        "prefer-spread": ["error"],
+        "prefer-template": ["error"],
         "quotes": ["error", "single"],
+        "quote-props": ["error", "as-needed"],
         "react/prop-types": ["off"],
         "react/jsx-curly-spacing": ["error"],
+        "rest-spread-spacing": ["error"],
         "semi": ["error", "never"],
+        "space-before-blocks": ["error"],
+        "space-before-function-paren": ["error", "never"],
+        "space-in-parens": ["error", "never"],
+        "space-infix-ops": ["error"],
+        "space-unary-ops": ["error", {
+            "words": true,
+            "nonwords": false
+        }],
+        "spaced-comment": ["error"],
+        "template-curly-spacing": ["error"],
+        "yield-star-spacing": ["error"],
         "yoda": ["error"]
     }
 }

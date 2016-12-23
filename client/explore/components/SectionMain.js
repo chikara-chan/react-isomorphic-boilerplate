@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, {Component} from 'react'
 import styles from '../sass/SectionMain'
 
 class SectionMain extends Component {
@@ -7,19 +7,19 @@ class SectionMain extends Component {
     }
 
     handleFetch() {
-        const { actions } = this.props
+        const {actions} = this.props
 
         actions.fetchUserInfo()
     }
 
     handleClear() {
-        const { actions } = this.props
+        const {actions} = this.props
 
         actions.replaceUserInfo(null)
     }
 
     render() {
-        const { userInfo } = this.props
+        const {userInfo} = this.props
 
         return (
             <section className={styles.sectionMain}>

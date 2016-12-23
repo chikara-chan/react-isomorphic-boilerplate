@@ -1,6 +1,6 @@
-import React, { Component, Children, cloneElement } from 'react'
-import { bindActionCreators } from 'redux'
-import { connect } from 'react-redux'
+import React, {Children, Component, cloneElement} from 'react'
+import {bindActionCreators} from 'redux'
+import {connect} from 'react-redux'
 import Header from '../components/Header'
 import Navbar from '../components/Navbar'
 import Main from '../components/Main'
@@ -14,7 +14,7 @@ class App extends Component {
     }
 
     render() {
-        const { children, userInfo, actions } = this.props
+        const {children, userInfo, actions} = this.props
 
         return (
             <div className={styles.app}>
@@ -34,15 +34,11 @@ class App extends Component {
 }
 
 function mapStateToProps(state) {
-    return {
-        userInfo: state.userInfo
-    }
+    return {userInfo: state.userInfo}
 }
 
 function mapDispatchToProps(dispatch) {
-    return {
-        actions: bindActionCreators(actions, dispatch)
-    }
+    return {actions: bindActionCreators(actions, dispatch)}
 }
 
 export default connect(

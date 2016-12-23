@@ -2,9 +2,7 @@
 require('babel-polyfill')
 
 // Javascript require hook
-require('babel-register')({
-    presets: ['es2015', 'react', 'stage-0']
-})
+require('babel-register')({presets: ['es2015', 'react', 'stage-0']})
 
 // Css require hook
 require('css-modules-require-hook')({

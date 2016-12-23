@@ -1,5 +1,5 @@
-import React, { Component } from 'react'
-import { Link, IndexLink } from 'react-router'
+import React, {Component} from 'react'
+import {IndexLink, Link} from 'react-router'
 import styles from '../sass/Navbar'
 
 class Navbar extends Component {

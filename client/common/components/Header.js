@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, {Component} from 'react'
 import styles from '../sass/Header'
 import imgAvatar from '../assets/avatar.png'
 
