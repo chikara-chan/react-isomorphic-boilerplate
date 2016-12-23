@@ -56,6 +56,8 @@ react-isomorphic-boilerplate/                // root directory
 │   ├── app.js                               // create koa instance in server
 │   └── index.js                             // server entry file
 ├── .editorconfig                            // uniform the text editor behavior
+├── .eslintignore                            // which paths should be omitted from linting
+├── .eslintrc.json                           // specific rules for eslint
 ├── .gitattributes                           // uniform the new line perform behavior
 ├── .gitignore                               // ignore the specific files when using git
 ├── LICENSE                                  // license introduction
