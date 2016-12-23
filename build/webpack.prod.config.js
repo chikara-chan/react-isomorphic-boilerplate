@@ -10,6 +10,7 @@ function getExternals() {
         .filter(filename => !filename.includes('.bin'))
         .reduce((externals, filename) => {
             externals[filename] = `commonjs ${filename}`
+
             return externals
         }, {})
 }

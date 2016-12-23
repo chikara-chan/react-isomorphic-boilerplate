@@ -14,7 +14,7 @@ function ajax(options) {
     let promise
 
     options = Object.assign({}, defaults, options)
-    promise = request[options['type']](options['url']).withCredentials()
+    promise = request[options.type](options.url).withCredentials()
     Object.keys(options).forEach(key => {
         if (!key.match(/type|url|data/)) {
             promise.set(key, options[key])
@@ -22,7 +22,7 @@ function ajax(options) {
     })
 
     return new Promise(resolve => {
-        promise.send(options['data']).then(res => {
+        promise.send(options.data).then(res => {
             resolve(res.body)
         }).catch(err => {
             console.log(err)
@@ -102,15 +102,18 @@ export default {
 }
 
 var a = [1, 3, 5]
-a['as'] = 1
-a()
-    .v()
-    .v()
 
-function b () {
-    return
+a.as = new Date()
+a ={
+    key: 'asd', asd: 'adfsdf'
 }
+a().v()
+function b () {
+    return 1===1
+}
+
 // Asdasd
-if (a>1)
+if (a>1) {
     return a
+}
 console.log(a + b)
