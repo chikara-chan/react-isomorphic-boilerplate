@@ -100,24 +100,3 @@ export default {
     parseDate,
     getUrlParams
 }
-
-let a = [1, 3, 5],
-    e,
-    c = () => 1
-const p = 1
-
-console.log(`${c} ${p}`)
-console.log(e)
-console.log(p)
-a.as = new Date()
-a = {key: 'asd'}
-a().v()
-function b() {
-    return 1 === 1
-}
-
-// Asdasd
-if (a > 1) {
-    return a
-}
-console.log(a + b)
