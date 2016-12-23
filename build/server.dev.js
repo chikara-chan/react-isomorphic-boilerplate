@@ -12,10 +12,10 @@ require('css-modules-require-hook')({
     preprocessCss: (data, filename) =>
         require('node-sass').renderSync({
             data,
-            file: filename,
+            file: filename
         }).css,
     camelCase: true,
-    generateScopedName: '[name]__[local]__[hash:base64:8]',
+    generateScopedName: '[name]__[local]__[hash:base64:8]'
 })
 
 // Image require hook

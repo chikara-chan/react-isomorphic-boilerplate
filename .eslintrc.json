@@ -5,22 +5,28 @@
         "commonjs": true,
         "es6": true
     },
-    "extends": "eslint:recommended",
+    "parser": "babel-eslint",
+    "extends": ["eslint:recommended", "plugin:react/recommended"],
     "parserOptions": {
-        "ecmaVersion": 2017,
+        "ecmaVersion": 2015,
         "sourceType": "module",
         "ecmaFeatures": {
-            "experimentalObjectRestSpread": true,
             "jsx": true
         }
     },
-    "plugins": ["react"],
     "rules": {
-        "indent": ["error", 4],
-        "linebreak-style": ["error", "unix"],
+        "array-bracket-spacing": ["error"],
+        "block-spacing": ["error"],
+        "brace-style": ["error"],
+        "capitalized-comments": ["error"],
+        "comma-dangle": ["error"],
+        "indent": ["error", 4, { "SwitchCase": 1, "MemberExpression": 1 }],
+        "linebreak-style": ["error"],
+        "no-cond-assign": ["off"],
+        "no-console": ["off"],
         "quotes": ["error", "single"],
         "semi": ["error", "never"],
-        "no-console": ["off"],
-        "no-unused-vars": ["off"]
+        "react/prop-types": ["off"],
+        "react/jsx-curly-spacing": ["error"]
     }
 }

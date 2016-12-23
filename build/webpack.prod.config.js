@@ -82,7 +82,7 @@ const clientConfig = {
             chunksSortMode: 'none'
         }),
         new ExtractTextPlugin('[name].[contenthash:8].css')
-    ],
+    ]
 }
 
 const serverConfig = {
@@ -137,7 +137,7 @@ const serverConfig = {
         new webpack.DefinePlugin({
             'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
         })
-    ],
+    ]
 }
 
 module.exports = [clientConfig, serverConfig]

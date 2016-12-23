@@ -7,8 +7,6 @@ class SectionMain extends Component {
     }
 
     render() {
-        const { actions } = this.props
-
         return (
             <section className={styles.sectionMain}>
                 Home

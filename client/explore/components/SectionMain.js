@@ -19,7 +19,7 @@ class SectionMain extends Component {
     }
 
     render() {
-        const { userInfo, actions } = this.props
+        const { userInfo } = this.props
 
         return (
             <section className={styles.sectionMain}>

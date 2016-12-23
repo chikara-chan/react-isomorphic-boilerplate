@@ -8,19 +8,17 @@ import configureStore from '../../client/common/store/configureStore'
 const store = configureStore()
 
 async function clientRoute(ctx, next) {
-    let _error, _redirectLocation, _renderProps
+    let _renderProps
 
     match({ routes: route, location: ctx.url }, (error, redirectLocation, renderProps) => {
-        _error = error
-        _redirectLocation = redirectLocation
         _renderProps = renderProps
     })
 
     if (_renderProps) {
         await ctx.render('index', {
             root: renderToString(
-                <Provider store={ store }>
-                    <RouterContext { ..._renderProps } />
+                <Provider store={store}>
+                    <RouterContext {..._renderProps} />
                 </Provider>
             ),
             state: store.getState()

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Router, Route, browserHistory, IndexRoute } from 'react-router'
+import { Route, IndexRoute } from 'react-router'
 import Common from './common/containers/Root'
 import Home from './home/containers/App'
 import About from './about/containers/App'

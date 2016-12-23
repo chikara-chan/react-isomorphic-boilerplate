@@ -51,15 +51,15 @@ function formatDate(timestamp, format) {
             case 'y':
                 return years.substr(-length)
             case 'M':
-                return (month.length == 1 ? '0' + month : month).substr(-length)
+                return (month.length === 1 ? '0' + month : month).substr(-length)
             case 'd':
-                return (day.length == 1 ? '0' + day : day).substr(-length)
+                return (day.length === 1 ? '0' + day : day).substr(-length)
             case 'h':
-                return (hours.length == 1 ? '0' + hours : hours).substr(-length)
+                return (hours.length === 1 ? '0' + hours : hours).substr(-length)
             case 'm':
-                return (minutes.length == 1 ? '0' + minutes : minutes).substr(-length)
+                return (minutes.length === 1 ? '0' + minutes : minutes).substr(-length)
             case 's':
-                return (seconds.length == 1 ? '0' + seconds : seconds).substr(-length)
+                return (seconds.length === 1 ? '0' + seconds : seconds).substr(-length)
         }
     })
 }
@@ -100,3 +100,16 @@ export default {
     parseDate,
     getUrlParams
 }
+
+var a = [1,3,5]
+a()
+    .v()
+    .v()
+
+function b () {
+    return
+}
+// Asdasd
+if (a>1)
+    return a
+console.log(a + b)

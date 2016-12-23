@@ -10,13 +10,13 @@ class Header extends Component {
     render() {
         return (
             <header className={styles.header}>
-            	<div className={styles.left}>
+                <div className={styles.left}>
                     <span className={styles.span}>Boilerplate</span>
-            	</div>
-            	<div className={styles.right}>
+                </div>
+                <div className={styles.right}>
                     <span className={styles.description}>Hello, world！</span>
                     <img className={styles.img} src={imgAvatar}/>
-            	</div>
+                </div>
             </header>
         )
     }

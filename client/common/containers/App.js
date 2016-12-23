@@ -18,9 +18,9 @@ class App extends Component {
 
         return (
             <div className={styles.app}>
-            	<Header/>
+                <Header/>
                 <Navbar/>
-            	<Main>
+                <Main>
                     {Children.map(children, child =>
                         cloneElement(child, {
                             userInfo,

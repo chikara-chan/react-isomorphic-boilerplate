@@ -71,5 +71,5 @@ module.exports = {
             template: './server/views/tpl/index.tpl.html'
         }),
         new ProgressBarPlugin({ summary: false })
-    ],
+    ]
 }

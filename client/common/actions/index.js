@@ -8,12 +8,12 @@ export function replaceUserInfo(userInfo) {
     }
 }
 
-export function fetchUserInfo(data) {
+export function fetchUserInfo() {
     return dispatch => {
         utils.ajax({
             url: '/api/user/getUserInfo'
         }).then(res => {
-           dispatch(replaceUserInfo(res))
+            dispatch(replaceUserInfo(res))
         })
     }
 }
