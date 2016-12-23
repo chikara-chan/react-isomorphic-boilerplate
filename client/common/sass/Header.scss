@@ -4,12 +4,14 @@
     left: 0;
     z-index: 4;
     width: 100%;
+
     .left {
         float: left;
         width: 200px;
         height: 50px;
         background: #327eab;
         line-height: 50px;
+
         .span {
             margin-left: 20px;
             font-size: 20px;
@@ -23,13 +25,14 @@
         margin-left: 200px;
         background: #378cbe;
         line-height: 50px;
-        .img{
+
+        .img {
             float: right;
-            width:32px;
-            height:32px;
-            border-radius:100%;
+            width: 32px;
+            height: 32px;
+            border-radius: 100%;
             margin-top: 9px;
-            margin-right:10px;
+            margin-right: 10px;
         }
         .description {
             float: right;

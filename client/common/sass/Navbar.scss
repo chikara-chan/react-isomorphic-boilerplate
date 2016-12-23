@@ -4,17 +4,20 @@
     bottom: 0;
     left: 0;
     width: 200px;
-    padding-top:10px;
-    background:#222d32;
+    padding-top: 10px;
+    background: #222d32;
     font-size: 14px;
+
     .link {
         display: block;
         position: relative;
         padding: 10px 30px;
         text-decoration: none;
         color: #aaa;
+
         &.active {
-            color:#fff;
+            color: #fff;
+
             &:after {
                 content: '';
                 display: block;
