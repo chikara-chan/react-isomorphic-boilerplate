@@ -1,4 +1,4 @@
-async function getUserInfo(ctx, next) {
+async function getUserInfo(ctx) {
     ctx.body = {
         name: 'Chikara Chan',
         gender: 'male',

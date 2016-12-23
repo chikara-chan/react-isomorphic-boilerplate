@@ -1,6 +1,5 @@
 const path = require('path'),
     webpack = require('webpack'),
-    autoprefixer = require('autoprefixer'),
     HtmlWebpackPlugin = require('html-webpack-plugin'),
     ProgressBarPlugin = require('progress-bar-webpack-plugin')
 
