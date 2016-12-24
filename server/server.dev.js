@@ -22,14 +22,14 @@ require('asset-require-hook')({
     limit: 8000
 })
 
-const app = require('../server/app.js').default,
+const app = require('./app.js').default,
     convert = require('koa-convert'),
     webpack = require('webpack'),
     fs = require('fs'),
     path = require('path'),
     devMiddleware = require('koa-webpack-dev-middleware'),
     hotMiddleware = require('koa-webpack-hot-middleware'),
-    config = require('./webpack.dev.config'),
+    config = require('../build/webpack.dev.config'),
     port = 3000,
     compiler = webpack(config)
 
