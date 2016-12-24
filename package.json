@@ -7,7 +7,7 @@
         "build": "npm run clean && NODE_ENV=production webpack --config ./build/webpack.prod.config.js --progress",
         "clean": "rm -rf ./dist && rm -f ./server.js && rm -rf ./server/views/*.*",
         "lint": "eslint . --ext .js",
-        "start": "pm2 start ./server.js",
+        "start": "node ./server.js",
         "pm2": "pm2"
     },
     "dependencies": {
