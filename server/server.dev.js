@@ -33,7 +33,7 @@ const app = require('./app.js').default,
     router = require('./routes').default,
     middlewares = require('./middlewares').default,
     config = require('../build/webpack.dev.config'),
-    port = 3000,
+    port =  process.env.port || 3000,
     compiler = webpack(config)
 
 // Webpack hook event to write html file into /server/views due to server render
