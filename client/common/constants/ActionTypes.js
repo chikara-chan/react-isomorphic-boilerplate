@@ -1,1 +1,0 @@
-export const REPLACE_USER_INFO = 'REPLACE_USER_INFO'
