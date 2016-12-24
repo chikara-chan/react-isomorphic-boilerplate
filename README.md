@@ -1,11 +1,11 @@
 # React Isomorphic Boilerplate
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/chikara-chan/react-isomorphic-boilerplate/pulls) [![npm](https://img.shields.io/npm/l/express.svg)](https://github.com/chikara-chan/react-isomorphic-boilerplate/blob/master/LICENSE)
+[![dependencies Status](https://david-dm.org/chikara-chan/react-isomorphic-boilerplate/status.svg)](https://david-dm.org/chikara-chan/react-isomorphic-boilerplate) [![devDependencies Status](https://david-dm.org/chikara-chan/react-isomorphic-boilerplate/dev-status.svg)](https://david-dm.org/chikara-chan/react-isomorphic-boilerplate?type=dev) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/chikara-chan/react-isomorphic-boilerplate/pulls) [![npm](https://img.shields.io/npm/l/express.svg)](https://github.com/chikara-chan/react-isomorphic-boilerplate/blob/master/LICENSE)
 
 An universal React isomorphic boilerplate for building server side render web app.
 
 ## Introduction
 
-This repository is an universal React isomorphic boilerplate for developer to quickly build a super fast and powerfull web app that can be rendered both on the client and on the server using the most cutting-edge technology. Compared to others, this boilerplate has more pithily and more elegant configuration file divided by environment variables, one for development, one for production. In addition, the directory structure is organized corresponding to mvc principle aim at bring developer the best developing experience.
+This repository is an universal React isomorphic boilerplate for developer to quickly build a super fast and powerfull web app that can be rendered both on the client and on the server using the most cutting-edge technology. Compared to others, this boilerplate has more pithily and more elegant configuration file divided by environment variables, one for development, one for production. In addition, the directory structure is organized corresponding to mvc principle aim at the best practice.
 
 ## Technology Stack
 
@@ -23,6 +23,7 @@ This repository is an universal React isomorphic boilerplate for developer to qu
 - [Babel](https://github.com/babel/babel)
 - [Babel+](http://babeljs.io/docs/plugins/)
 - [ESLint](https://github.com/eslint/eslint)
+- [Hot Module Replacement](https://webpack.github.io/docs/hot-module-replacement.html)
 - ~~Database~~
 - ~~Test Framework~~
 
