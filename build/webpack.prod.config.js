@@ -81,7 +81,7 @@ clientConfig = {
 
 serverConfig = {
     context: path.resolve(__dirname, '..'),
-    entry: {server: './server/index'},
+    entry: {server: './server/server.prod'},
     output: {
         path: path.resolve(__dirname, '..'),
         filename: '[name].js'
