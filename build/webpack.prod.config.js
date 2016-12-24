@@ -31,7 +31,7 @@ clientConfig = {
     output: {
         path: path.resolve(__dirname, '../dist'),
         filename: '[name].[chunkhash:8].js',
-        publicPath: './'
+        publicPath: '/'
     },
     module: {
         loaders: [{
