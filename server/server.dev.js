@@ -29,6 +29,9 @@ const app = require('./app.js').default,
     path = require('path'),
     devMiddleware = require('koa-webpack-dev-middleware'),
     hotMiddleware = require('koa-webpack-hot-middleware'),
+    views = require('koa-views'),
+    router = require('./routes').default,
+    middlewares = require('./middlewares').default,
     config = require('../build/webpack.dev.config'),
     port = 3000,
     compiler = webpack(config)
@@ -47,6 +50,11 @@ compiler.plugin('emit', (compilation, callback) => {
     })
     callback()
 })
+
+app.use(views(path.join(__dirname, 'views/dev'), {map: {html: 'ejs'}}))
+app.use(middlewares)
+app.use(router.routes())
+app.use(router.allowedMethods())
 console.log(`\n==> 🌎  Listening on port ${port}. Open up http://localhost:${port}/ in your browser.\n`)
 app.use(convert(devMiddleware(compiler, {
     noInfo: true,
