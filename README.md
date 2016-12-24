@@ -22,6 +22,9 @@ This repository is an universal React isomorphic boilerplate for developer to qu
 - [Webpack+](https://webpack.js.org/loaders/)
 - [Babel](https://github.com/babel/babel)
 - [Babel+](http://babeljs.io/docs/plugins/)
+- [ESLint](https://github.com/eslint/eslint)
+- ~~Database~~
+- ~~Test Framework~~
 
 ## Getting Started
 
