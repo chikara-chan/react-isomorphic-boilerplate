@@ -51,7 +51,7 @@ compiler.plugin('emit', (compilation, callback) => {
     callback()
 })
 
-app.use(views(path.join(__dirname, 'views/dev'), {map: {html: 'ejs'}}))
+app.use(views(path.resolve(__dirname, '../views/dev'), {map: {html: 'ejs'}}))
 app.use(middlewares)
 app.use(router.routes())
 app.use(router.allowedMethods())

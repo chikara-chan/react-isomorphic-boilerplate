@@ -8,7 +8,7 @@ import middlewares from './middlewares'
 
 const port = 3000
 
-app.use(views(path.join(__dirname, 'views/prod'), {map: {html: 'ejs'}}))
+app.use(views(path.resolve(__dirname, '../views/prod'), {map: {html: 'ejs'}}))
 app.use(middlewares)
 app.use(router.routes())
 app.use(router.allowedMethods())
