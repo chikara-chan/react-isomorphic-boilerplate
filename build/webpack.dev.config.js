@@ -63,7 +63,7 @@ module.exports = {
         new webpack.NoErrorsPlugin(),
         new webpack.DefinePlugin({'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)}),
         new HtmlWebpackPlugin({
-            filename: '../server/views/index.html',
+            filename: '../server/views/dev/index.html',
             template: './server/views/tpl/index.tpl.html'
         }),
         new ProgressBarPlugin({summary: false})

@@ -71,7 +71,7 @@ clientConfig = {
         }),
         new webpack.DefinePlugin({'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)}),
         new HtmlWebpackPlugin({
-            filename: '../server/views/index.html',
+            filename: '../server/views/prod/index.html',
             template: './server/views/tpl/index.tpl.html',
             chunksSortMode: 'none'
         }),
