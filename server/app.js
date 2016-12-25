@@ -5,7 +5,6 @@ import logger from 'koa-logger'
 import session from 'koa-session'
 import compress from 'koa-compress'
 import convert from 'koa-convert'
-import path from 'path'
 
 const app = new Koa()
 
