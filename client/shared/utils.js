@@ -71,10 +71,10 @@ function formatDate(timestamp, format) {
 function parseDate(str) {
     let results
 
-    if (results = str.match(/^ *(\d{4})-(\d{1,2})-(\d{1,2}) *$/)) {
-        return new Date(parseInt(results[1]), parseInt(results[2]) - 1, parseInt(results[3]))
-    } else if (results = str.match(/^ *(\d{4})-(\d{1,2})-(\d{1,2}) +(\d{1,2}):(\d{1,2}):(\d{1,2}) *$/)) {
-        return new Date(parseInt(results[1]), parseInt(results[2]) - 1, parseInt(results[3]), parseInt(results[4]), parseInt(results[5]), parseInt(results[6]))
+    if (results = str.match(/^\s*(\d{4})-(\d{1,2})-(\d{1,2})\s*$/)) {
+        return new Date(+results[1], +results[2] - 1, +results[3])
+    } else if (results = str.match(/^\s*(\d{4})-(\d{1,2})-(\d{1,2})\s+(\d{1,2}):(\d{1,2}):(\d{1,2})\s*$/)) {
+        return new Date(+results[1], +results[2] - 1, +results[3], +results[4], +results[5], +results[6])
     }
 }
 
