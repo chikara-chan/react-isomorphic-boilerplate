@@ -11,9 +11,9 @@ class App extends Component {
         const {userInfo, actions} = this.props
 
         return (
-            <section className={styles.app}>
+            <div className={styles.app}>
                 <SectionMain userInfo={userInfo} actions={actions}></SectionMain>
-            </section>
+            </div>
         )
     }
 }
