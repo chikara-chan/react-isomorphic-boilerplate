@@ -35,7 +35,8 @@
         "func-name-matching": ["error"],
         "generator-star-spacing": ["error"],
         "indent": ["error", 4, {
-            "SwitchCase": 1
+            "SwitchCase": 1,
+            "MemberExpression": 1
         }],
         "jsx-quotes": ["error"],
         "key-spacing": ["error"],
