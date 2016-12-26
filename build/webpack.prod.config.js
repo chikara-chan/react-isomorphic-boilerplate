@@ -31,7 +31,7 @@ clientConfig = {
     output: {
         path: path.resolve(__dirname, '../dist/client'),
         filename: '[name].[chunkhash:8].js',
-        chunkFilename: 'chunk.[id].[chunkhash:8].js',
+        chunkFilename: 'chunk.[name].[chunkhash:8].js',
         publicPath: '/'
     },
     module: {
@@ -45,7 +45,7 @@ clientConfig = {
             }
         }, {
             test: /\.scss$/,
-            loader: ExtractTextPlugin.extract('style', 'css?modules&camelCase&localIdentName=[hash:base64:8]!postcss!sass')
+            loader: ExtractTextPlugin.extract('style', 'css?modules&camelCase&importLoaders=1&localIdentName=[hash:base64:8]!postcss!sass')
         }, {
             test: /\.(jpg|png|gif|webp)$/,
             loader: 'url?limit=8000'
@@ -86,7 +86,7 @@ serverConfig = {
     output: {
         path: path.resolve(__dirname, '../dist/server'),
         filename: '[name].js',
-        chunkFilename: 'chunk.[id].js'
+        chunkFilename: 'chunk.[name].js'
     },
     target: 'node',
     node: {
@@ -102,7 +102,7 @@ serverConfig = {
         }, {
             test: /\.scss$/,
             loaders: [
-                'css/locals?modules&camelCase&localIdentName=[hash:base64:8]',
+                'css/locals?modules&camelCase&importLoaders=1&localIdentName=[hash:base64:8]',
                 'sass'
             ]
         }, {
