@@ -8,10 +8,6 @@ function replaceUserInfo(userInfo) {
     }
 }
 
-function clearUserInfo() {
-    return {type: types.CLEAR_USER_INFO}
-}
-
 function fetchUserInfo() {
     return dispatch => {
         utils.ajax({url: '/api/user/getUserInfo'}).then(res => {
