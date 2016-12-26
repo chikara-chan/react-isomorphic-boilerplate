@@ -57,7 +57,11 @@
         "no-extra-parens": ["error"],
         "no-floating-decimal": ["error"],
         "no-lonely-if": ["error"],
-        "no-multiple-empty-lines": ["error"],
+        "no-multiple-empty-lines": ["error", {
+            "max": 1,
+            "maxBOF": 0,
+            "maxEOF": 1
+        }],
         "no-multi-spaces": ["error"],
         "no-redeclare": ["error"],
         "no-trailing-spaces": ["error"],
