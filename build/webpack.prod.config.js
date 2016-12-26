@@ -29,8 +29,9 @@ clientConfig = {
         ]
     },
     output: {
-        path: path.resolve(__dirname, '../dist'),
+        path: path.resolve(__dirname, '../dist/client'),
         filename: '[name].[chunkhash:8].js',
+        chunkFilename: 'chunk.[id].[chunkhash:8].js',
         publicPath: '/'
     },
     module: {
@@ -71,7 +72,7 @@ clientConfig = {
         }),
         new webpack.DefinePlugin({'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)}),
         new HtmlWebpackPlugin({
-            filename: '../views/prod/index.html',
+            filename: '../../views/prod/index.html',
             template: './views/tpl/index.tpl.html',
             chunksSortMode: 'none'
         }),
@@ -83,8 +84,9 @@ serverConfig = {
     context: path.resolve(__dirname, '..'),
     entry: {server: './server/server.prod'},
     output: {
-        path: path.resolve(__dirname, '..'),
-        filename: '[name].js'
+        path: path.resolve(__dirname, '../dist/server'),
+        filename: '[name].js',
+        chunkFilename: 'chunk.[id].js'
     },
     target: 'node',
     node: {
