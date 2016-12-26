@@ -1,17 +1,17 @@
 import React from 'react'
 import {render} from 'react-dom'
-import {Router, browserHistory} from 'react-router'
+import {Router, match, browserHistory} from 'react-router'
 import {Provider} from 'react-redux'
-import route from './route'
+import routes from './routes'
 import configureStore from './common/store/configureStore'
 
 const store = configureStore(window.REDUX_STATE)
 
-render(
-    <Provider store={store}>
-        <Router history={browserHistory}>
-            { route }
-        </Router>
-    </Provider>,
-    document.getElementById('root')
-)
+match({history: browserHistory, routes}, (error, redirectLocation, renderProps) => {
+    render(
+        <Provider store={store}>
+            <Router {...renderProps} />
+        </Provider>,
+        document.getElementById('root')
+    )
+})

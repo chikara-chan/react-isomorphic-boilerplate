@@ -3,8 +3,8 @@ import styles from '../sass/Header'
 import imgAvatar from '../assets/avatar.png'
 
 class Header extends Component {
-    constructor(props) {
-        super(props)
+    constructor() {
+        super()
     }
 
     render() {

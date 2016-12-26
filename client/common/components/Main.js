@@ -2,8 +2,8 @@ import React, {Component} from 'react'
 import styles from '../sass/Main'
 
 class Main extends Component {
-    constructor(props) {
-        super(props)
+    constructor() {
+        super()
     }
 
     render() {

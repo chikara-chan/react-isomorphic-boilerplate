@@ -3,8 +3,8 @@ import {IndexLink, Link} from 'react-router'
 import styles from '../sass/Navbar'
 
 class Navbar extends Component {
-    constructor(props) {
-        super(props)
+    constructor() {
+        super()
     }
 
     render() {

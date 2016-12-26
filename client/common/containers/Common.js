@@ -4,17 +4,17 @@ import {connect} from 'react-redux'
 import Header from '../components/Header'
 import Navbar from '../components/Navbar'
 import Main from '../components/Main'
-import * as actions from '../actions'
-import styles from '../sass/App'
+import actions from '../actions'
+import styles from '../sass/Common'
 import '../sass/global'
 
-class App extends Component {
-    constructor(props) {
-        super(props)
+class Common extends Component {
+    constructor() {
+        super()
     }
 
     render() {
-        const {children, userInfo, actions} = this.props
+        const {children, ...props} = this.props
 
         return (
             <div className={styles.app}>
@@ -22,10 +22,7 @@ class App extends Component {
                 <Navbar/>
                 <Main>
                     {Children.map(children, child =>
-                        cloneElement(child, {
-                            userInfo,
-                            actions
-                        })
+                        cloneElement(child, {...props})
                     )}
                 </Main>
             </div>
@@ -44,4 +41,4 @@ function mapDispatchToProps(dispatch) {
 export default connect(
     mapStateToProps,
     mapDispatchToProps
-)(App)
+)(Common)

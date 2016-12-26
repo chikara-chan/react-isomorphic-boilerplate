@@ -2,8 +2,8 @@ import React, {Component} from 'react'
 import styles from '../sass/SectionMain'
 
 class SectionMain extends Component {
-    constructor(props) {
-        super(props)
+    constructor() {
+        super()
     }
 
     handleFetch() {
@@ -15,7 +15,7 @@ class SectionMain extends Component {
     handleClear() {
         const {actions} = this.props
 
-        actions.replaceUserInfo(null)
+        actions.clearUserInfo()
     }
 
     render() {
@@ -35,7 +35,7 @@ class SectionMain extends Component {
                     Clear
                 </a>
                 <br/>
-                {userInfo && JSON.stringify(userInfo)}
+                <span className={styles.info}>{userInfo && JSON.stringify(userInfo)}</span>
             </section>
         )
     }

@@ -3,8 +3,8 @@ import SectionMain from '../components/SectionMain'
 import styles from '../sass/App'
 
 class App extends Component {
-    constructor(props) {
-        super(props)
+    constructor() {
+        super()
     }
 
     render() {

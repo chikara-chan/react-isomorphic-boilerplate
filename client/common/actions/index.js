@@ -1,18 +1,28 @@
-import {REPLACE_USER_INFO} from '../constants/ActionTypes'
+import types from '../constants/ActionTypes'
 import utils from '../../shared/utils'
 
-export function replaceUserInfo(userInfo) {
+function replaceUserInfo(userInfo) {
     return {
-        type: REPLACE_USER_INFO,
+        type: types.REPLACE_USER_INFO,
         userInfo
     }
 }
 
-export function fetchUserInfo() {
+function clearUserInfo() {
+    return {type: types.CLEAR_USER_INFO}
+}
+
+function fetchUserInfo() {
     return dispatch => {
         utils.ajax({url: '/api/user/getUserInfo'}).then(res => {
             dispatch(replaceUserInfo(res))
         })
     }
+}
+
+export default {
+    replaceUserInfo,
+    fetchUserInfo,
+    clearUserInfo
 }
 

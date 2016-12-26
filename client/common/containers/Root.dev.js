@@ -1,10 +1,10 @@
 import React, {Component} from 'react'
 import DevTools from './DevTools'
-import App from './App'
+import Common from './Common'
 
 class Root extends Component {
-    constructor(props) {
-        super(props)
+    constructor() {
+        super()
         this.state = {isMounted: false}
     }
 
@@ -19,7 +19,7 @@ class Root extends Component {
 
         return (
             <div>
-                <App>{children}</App>
+                <Common>{children}</Common>
                 {isMounted && <DevTools/>}
             </div>
         )
