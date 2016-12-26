@@ -60,7 +60,7 @@
         "no-multiple-empty-lines": ["error", {
             "max": 1,
             "maxBOF": 0,
-            "maxEOF": 1
+            "maxEOF": 0
         }],
         "no-multi-spaces": ["error"],
         "no-redeclare": ["error"],
