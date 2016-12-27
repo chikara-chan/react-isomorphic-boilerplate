@@ -1,6 +1,6 @@
 import React from 'react'
 import {renderToString} from 'react-dom/server'
-import {RouterContext, match} from 'react-router'
+import {match, RouterContext} from 'react-router'
 import {Provider} from 'react-redux'
 import routes from '../../client/routes'
 import configureStore from '../../client/common/store/configureStore'
