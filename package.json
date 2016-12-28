@@ -3,9 +3,9 @@
     "version": "1.0.0",
     "description": "An universal React isomorphic boilerplate for building server side render web app",
     "scripts": {
-        "dev": "NODE_ENV=development nodemon ./server/server.dev.js --watch server --watch build",
-        "build": "npm run clean && NODE_ENV=production webpack --config ./build/webpack.prod.config.js --progress",
-        "clean": "rm -rf ./dist/client/* && rm -rf ./dist/server/* && rm -rf ./views/prod/*",
+        "dev": "cross-env NODE_ENV=development nodemon ./server/server.dev.js --watch server --watch build",
+        "build": "npm run clean && cross-env NODE_ENV=production webpack --config ./build/webpack.prod.config.js --progress",
+        "clean": "rimraf ./dist/client/* && rimraf ./dist/server/* && rimraf ./views/prod/*",
         "lint": "eslint . --ext .js",
         "start": "node ./dist/server/server.js",
         "pm2": "pm2"
@@ -45,6 +45,7 @@
         "babel-preset-react-hmre": "^1.1.1",
         "babel-preset-stage-0": "^6.16.0",
         "babel-register": "^6.18.0",
+        "cross-env": "^3.1.3",
         "css-loader": "^0.26.0",
         "css-modules-require-hook": "^4.0.5",
         "eslint": "^3.12.2",
@@ -63,6 +64,7 @@
         "redux-devtools": "^3.3.1",
         "redux-devtools-dock-monitor": "^1.1.1",
         "redux-devtools-log-monitor": "^1.1.1",
+        "rimraf": "^2.5.4",
         "sass-loader": "^4.0.1",
         "style-loader": "^0.13.1",
         "url-loader": "^0.5.7",
