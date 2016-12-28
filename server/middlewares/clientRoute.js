@@ -18,7 +18,7 @@ async function clientRoute(ctx, next) {
         await ctx.render('index', {
             root: renderToString(
                 <Provider store={store}>
-                    <RouterContext {..._renderProps} />
+                    <RouterContext {..._renderProps}/>
                 </Provider>
             ),
             state: store.getState()
