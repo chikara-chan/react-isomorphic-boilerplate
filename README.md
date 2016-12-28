@@ -102,6 +102,10 @@ It happens when run in developemnt mode. This is caused by deprecated using [ext
 
 It happens also when run in developemnt mode. This is caused by when you update the react component code and reload the page, the markup generated mismatches that on server render. However, once you restart the server, the checksum will be valid. So it is harmless, ignore it also.
 
+## Links
+
+[http://www.jianshu.com/p/0ecd727107bb](http://www.jianshu.com/p/0ecd727107bb)
+
 ## License
 
 [MIT](https://github.com/chikara-chan/react-isomorphic-boilerplate/blob/master/LICENSE)
