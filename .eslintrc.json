@@ -85,6 +85,7 @@
         "quote-props": ["error", "as-needed"],
         "react/prop-types": ["off"],
         "react/jsx-curly-spacing": ["error"],
+        "react/jsx-space-before-closing": ["error", "never"],
         "rest-spread-spacing": ["error"],
         "semi": ["error", "never"],
         "space-before-blocks": ["error"],
