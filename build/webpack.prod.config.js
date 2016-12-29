@@ -41,7 +41,7 @@ clientConfig = {
             loader: 'babel',
             query: {
                 presets: ['es2015', 'react', 'stage-0'],
-                plugins: ['transform-runtime']
+                plugins: ['transform-runtime', 'add-module-exports']
             }
         }, {
             test: /\.scss$/,
@@ -98,7 +98,10 @@ serverConfig = {
             test: /\.js$/,
             exclude: /node_modules/,
             loader: 'babel',
-            query: {presets: ['es2015', 'react', 'stage-0']}
+            query: {
+                presets: ['es2015', 'react', 'stage-0'],
+                plugins: ['add-module-exports']
+            }
         }, {
             test: /\.scss$/,
             loaders: [
