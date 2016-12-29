@@ -76,7 +76,7 @@ clientConfig = {
             template: './views/tpl/index.tpl.html',
             chunksSortMode: 'none'
         }),
-        new ExtractTextPlugin('[name].[contenthash:8].css')
+        new ExtractTextPlugin('[name].[contenthash:8].css', {allChunks: true})
     ]
 }
 
