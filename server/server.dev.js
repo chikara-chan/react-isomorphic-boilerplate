@@ -2,7 +2,10 @@
 require('babel-polyfill')
 
 // Javascript require hook
-require('babel-register')({presets: ['es2015', 'react', 'stage-0']})
+require('babel-register')({
+    presets: ['es2015', 'react', 'stage-0'],
+    plugins: ['add-module-exports']
+})
 
 // Css require hook
 require('css-modules-require-hook')({
@@ -22,7 +25,7 @@ require('asset-require-hook')({
     limit: 8000
 })
 
-const app = require('./app.js').default,
+const app = require('./app.js'),
     convert = require('koa-convert'),
     webpack = require('webpack'),
     fs = require('fs'),
@@ -30,8 +33,8 @@ const app = require('./app.js').default,
     devMiddleware = require('koa-webpack-dev-middleware'),
     hotMiddleware = require('koa-webpack-hot-middleware'),
     views = require('koa-views'),
-    router = require('./routes').default,
-    middlewares = require('./middlewares').default,
+    router = require('./routes'),
+    middlewares = require('./middlewares'),
     config = require('../build/webpack.dev.config'),
     port = process.env.port || 3000,
     compiler = webpack(config)

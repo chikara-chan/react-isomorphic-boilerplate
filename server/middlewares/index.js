@@ -7,7 +7,7 @@ const middlewares = fs.readdirSync(__dirname)
         filename !== path.basename(__filename)
     )
     .map(filename =>
-        require(`./${filename}`).default
+        require(`./${filename}`)
     )
 
 export default compose(middlewares)
