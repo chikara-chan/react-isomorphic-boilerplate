@@ -6,7 +6,7 @@ An universal React isomorphic boilerplate for building server side render web ap
 
 ## Introduction
 
-This repository is an universal React isomorphic boilerplate for developer to quickly build a super fast and powerfull web app that can be rendered both on the client and on the server using the most cutting-edge technology. Compared to others, this boilerplate has more pithily and more elegant configuration file based on environment variables, one for development, one for production. In addition, the directory structure is organized corresponding to mvc principle aim at the best practice.
+This repository is an universal React isomorphic boilerplate for developer to quickly build a super fast and powerful web app that can be rendered both on the client and on the server using the most cutting-edge technology. Compared to others, this boilerplate has more pithily and more elegant configuration file based on environment variables, one for development, one for production. In addition, the directory structure is organized corresponding to mvc principle aim at the best practice.
 
 ## Technology Stack
 
@@ -96,11 +96,11 @@ While the ideal case can lead to a nice, clean separation of concerns, inevitabl
 
 ####[FOUC](https://www.google.com.hk/url?sa=t&rct=j&q=&esrc=s&source=web&cd=2&ved=0ahUKEwimhPqTrofRAhXHkJQKHTEYCfMQFggjMAE&url=https%3a%2f%2fen%2ewikipedia%2eorg%2fwiki%2fFlash_of_unstyled_content&usg=AFQjCNGjAnNtZtjPb5oLsT9Wlf9az7hXTw)
 
-It happens when run in developemnt mode. This is caused by deprecated using [extract-text-webpack-plugin](https://github.com/webpack/extract-text-webpack-plugin) in development for getting a seamless hmr experience.(Why deprecated? See this [Issue](https://github.com/webpack/extract-text-webpack-plugin/issues/30)) If you are not an OCD, go ahead, ignore it.
+It happens when run in development mode. This is caused by deprecated using [extract-text-webpack-plugin](https://github.com/webpack/extract-text-webpack-plugin) in development for getting a seamless hmr experience.(Why deprecated? See this [Issue](https://github.com/webpack/extract-text-webpack-plugin/issues/30)) If you are not an OCD, go ahead, ignore it.
 
 ####Mismatch
 
-It happens also when run in developemnt mode. This is caused by when you update the react component code and reload the page, the markup generated mismatches that on server render. However, once you restart the server, the checksum will be valid. So it is harmless, ignore it also.
+It happens also when run in development mode. This is caused by when you update the react component code and reload the page, the markup generated mismatches that on server render. However, once you restart the server, the checksum will be valid. So it is harmless, ignore it also.
 
 ## Links
 
