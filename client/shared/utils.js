@@ -37,12 +37,12 @@ function ajax(options) {
  */
 function formatDate(timestamp, format) {
     const date = new Date(timestamp),
-        years = date.getFullYear().toString(),
-        month = date.getMonth().toString(),
-        day = date.getDate().toString(),
-        hours = date.getMonth().toString(),
-        minutes = date.getMinutes().toString(),
-        seconds = date.getSeconds().toString()
+        years = `${date.getFullYear()}`,
+        month = `${date.getMonth()}`,
+        day = `${date.getDate()}`,
+        hours = `${date.getMonth()}`,
+        minutes = `${date.getMinutes()}`,
+        seconds = `${date.getSeconds()}`
 
     return format.replace(/y+|M+|d+|h+|m+|s+/g, match => {
         const length = match.length
