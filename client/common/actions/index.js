@@ -14,7 +14,10 @@ function clearUserInfo() {
 
 function fetchUserInfo() {
     return dispatch => {
-        utils.ajax({url: '/api/user/getUserInfo'}).then(res => {
+        utils.ajax({
+            url: '/api/user/getUserInfo',
+            type: 'get'
+        }).then(res => {
             dispatch(replaceUserInfo(res))
         })
     }
