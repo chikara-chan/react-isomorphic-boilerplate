@@ -3,6 +3,6 @@ import user from '../controllers/user'
 
 const router = new Router({prefix: '/user'})
 
-router.post('/getUserInfo', user.getUserInfo)
+router.get('/getUserInfo', user.getUserInfo)
 
 export default router
