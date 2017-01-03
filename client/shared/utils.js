@@ -6,8 +6,8 @@ import request from 'superagent'
  */
 function ajax(options) {
     const defaults = {
-        type: 'post',
         url: null,
+        type: 'post',
         data: {},
         'Content-Type': 'application/json'
     }
@@ -16,7 +16,7 @@ function ajax(options) {
     options = Object.assign({}, defaults, options)
     promise = request[options.type](options.url).withCredentials()
     Object.keys(options).forEach(key => {
-        if (!key.match(/type|url|data/)) {
+        if (!key.match(/url|type|data/)) {
             promise.set(key, options[key])
         }
     })
