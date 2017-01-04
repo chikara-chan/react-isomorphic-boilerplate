@@ -39,7 +39,7 @@ const app = require('./app.js'),
     port = process.env.port || 3000,
     compiler = webpack(config)
 
-// Webpack hook event to write html file into /server/views due to server render
+// Webpack hook event to write html file into `/views/dev` from `/views/tpl` due to server render
 compiler.plugin('emit', (compilation, callback) => {
     const assets = compilation.assets
     let file, data
