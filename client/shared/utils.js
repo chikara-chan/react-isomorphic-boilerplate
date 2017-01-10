@@ -33,7 +33,7 @@ function ajax(options) {
 /**
  * @return {Object} Return url params
  */
-function getUrlParams() {
+function getURLParams() {
     const search = location.search.slice(1),
         rParam = /([^&]*)=([^&]*)/g
     let ret = {},
