@@ -1,7 +1,7 @@
 /**
  * @param {String} string
  * @param {Number} targetLength
- * @return {String} Return convert result
+ * @return {String}             Return convert result
  */
 function addZeros(str, targetLength = 2) {
     while (str.length < targetLength) {
@@ -14,7 +14,7 @@ function addZeros(str, targetLength = 2) {
 /**
  * @param  {Number} timestamp
  * @param  {String} format
- * @return {String} Return format result
+ * @return {String}           Return format result
  */
 function formatDate(timestamp, format = 'YYYY-MM-DD hh:mm:ss') {
     const date = new Date(timestamp),
@@ -48,7 +48,7 @@ function formatDate(timestamp, format = 'YYYY-MM-DD hh:mm:ss') {
 
 /**
  * @param  {String} dateStr
- * @return {Number} Return timestamp
+ * @return {Number}         Return timestamp
  */
 function parseDate(dateStr) {
     const rShortMatch = /^\s*(\d{4})-(\d{1,2})-(\d{1,2})\s*$/,
