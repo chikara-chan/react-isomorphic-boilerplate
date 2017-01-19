@@ -1,6 +1,6 @@
 # React Isomorphic Boilerplate
 
-An universal React isomorphic boilerplate for building server side render web app.
+An universal React isomorphic boilerplate for building server-side render web app.
 
 [![dependencies Status](https://david-dm.org/chikara-chan/react-isomorphic-boilerplate/status.svg)](https://david-dm.org/chikara-chan/react-isomorphic-boilerplate) [![devDependencies Status](https://david-dm.org/chikara-chan/react-isomorphic-boilerplate/dev-status.svg)](https://david-dm.org/chikara-chan/react-isomorphic-boilerplate?type=dev) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/chikara-chan/react-isomorphic-boilerplate/pulls) [![npm](https://img.shields.io/npm/l/express.svg)](https://github.com/chikara-chan/react-isomorphic-boilerplate/blob/master/LICENSE)
 
