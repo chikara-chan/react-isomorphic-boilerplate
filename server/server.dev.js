@@ -1,6 +1,9 @@
 // Provide custom regenerator runtime and core-js
 require('babel-polyfill')
 
+// Node babel source map support
+require("source-map-support").install()
+
 // Javascript require hook
 require('babel-register')({
     presets: ['es2015', 'react', 'stage-0'],
