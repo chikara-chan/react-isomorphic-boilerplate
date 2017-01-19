@@ -31,7 +31,7 @@ class Common extends Component {
 }
 
 function mapStateToProps(state) {
-    return {userInfo: state.userInfo}
+    return state
 }
 
 function mapDispatchToProps(dispatch) {
