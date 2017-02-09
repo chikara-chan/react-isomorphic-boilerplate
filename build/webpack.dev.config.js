@@ -32,7 +32,8 @@ module.exports = {
             loader: 'babel',
             query: {
                 presets: ['es2015', 'react', 'stage-0', 'react-hmre'],
-                plugins: ['transform-runtime', 'add-module-exports']
+                plugins: ['transform-runtime', 'add-module-exports'],
+                cacheDirectory: true
             }
         }, {
             test: /\.scss$/,
