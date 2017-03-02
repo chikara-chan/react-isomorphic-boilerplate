@@ -2,7 +2,7 @@
 require('babel-polyfill')
 
 // Node babel source map support
-require("source-map-support").install()
+require('source-map-support').install()
 
 // Javascript require hook
 require('babel-register')({
