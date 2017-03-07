@@ -24,6 +24,7 @@ require('css-modules-require-hook')({
 
 // Image require hook
 require('asset-require-hook')({
+    name: '/[hash].[ext]',
     extensions: ['jpg', 'png', 'gif', 'webp'],
     limit: 8000
 })
