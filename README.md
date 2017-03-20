@@ -80,25 +80,25 @@ react-isomorphic-boilerplate/                // root directory
 
 ## Why Isomorphic
 
-####SEO
+#### SEO
 
 An application that can only run in the client-side cannot serve HTML to crawlers, so it will have poor [SEO](https://en.wikipedia.org/wiki/Search_engine_optimization) by default. Web crawlers function by making a request to a web server and interpreting the result. but if the server returns a blank page, it’s not of much value. There are workarounds, but not without jumping through some hoops.
 
-####Performance
+#### Performance
 
 By the same token, if the server doesn’t render a full page of HTML but instead waits for client-side JavaScript to do so, users will experience a few critical seconds of blank page or loading spinner before seeing the content on the page. There are plenty of studies showing the drastic effect a slow site has on users, and thus revenue.
 
-####Maintainability
+#### Maintainability
 
 While the ideal case can lead to a nice, clean separation of concerns, inevitably some bits of application logic or view logic end up duplicated between client and server, often in different languages. Common examples are date and currency formatting, form validations, and routing logic. This makes maintenance a nightmare, especially for more complex apps.
 
 ## Problem exists yet
 
-####[FOUC](https://www.google.com.hk/url?sa=t&rct=j&q=&esrc=s&source=web&cd=2&ved=0ahUKEwimhPqTrofRAhXHkJQKHTEYCfMQFggjMAE&url=https%3a%2f%2fen%2ewikipedia%2eorg%2fwiki%2fFlash_of_unstyled_content&usg=AFQjCNGjAnNtZtjPb5oLsT9Wlf9az7hXTw)
+#### [FOUC](https://www.google.com.hk/url?sa=t&rct=j&q=&esrc=s&source=web&cd=2&ved=0ahUKEwimhPqTrofRAhXHkJQKHTEYCfMQFggjMAE&url=https%3a%2f%2fen%2ewikipedia%2eorg%2fwiki%2fFlash_of_unstyled_content&usg=AFQjCNGjAnNtZtjPb5oLsT9Wlf9az7hXTw)
 
 It happens when run in development mode. This is caused by deprecated using [extract-text-webpack-plugin](https://github.com/webpack/extract-text-webpack-plugin) in development for getting a seamless hmr experience.(Why deprecated? See this [Issue](https://github.com/webpack/extract-text-webpack-plugin/issues/30)) If you are not an OCD, go ahead, ignore it.
 
-####Mismatch
+#### Mismatch
 
 It happens also when run in development mode. This is caused by when you update the react component code and reload the page, the markup generated mismatches that on server render. However, once you restart the server, the checksum will be valid. So it is harmless, ignore it also.
 
