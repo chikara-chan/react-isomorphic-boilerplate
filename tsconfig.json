@@ -15,7 +15,7 @@
     "files": [
         "./typings/index.d.ts",
         "./client/index.tsx",
-        "./server/server.prod.ts"
+        "./server/server.prod.tsx"
     ],
     "exclude":[
         "./node_modules"

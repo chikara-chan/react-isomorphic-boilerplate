@@ -13,5 +13,8 @@ app.use(serve(path.resolve(__dirname, '../dist/client')))
 app.use(clientRoute)
 app.use(router.routes())
 app.use(router.allowedMethods())
+app.use(async (ctx,next)=>{
+    console.info(12345)
+})
 app.listen(port)
 console.log(`\n==> 🌎  Listening on port ${port}. Open up http://localhost:${port}/ in your browser.\n`)

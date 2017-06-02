@@ -1,9 +1,10 @@
 import * as fs from 'fs'
 import * as path from 'path'
+// import router from './user';
 import * as Router from 'koa-router'
 
 const router =Router({prefix: '/api'});
-let subRouter
+// let subRouter
 
 // fs.readdirSync(__dirname)
 //     .filter(filename =>

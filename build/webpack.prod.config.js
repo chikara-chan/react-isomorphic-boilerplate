@@ -92,7 +92,7 @@ clientConfig = {
 
 serverConfig = {
     context: path.resolve(__dirname, '..'),
-    entry: {server: './server/server.prod.ts'},
+    entry: {server: './server/server.prod.tsx'},
     output: {
         path: path.resolve(__dirname, '../dist/server'),
         filename: '[name].js',
@@ -142,10 +142,10 @@ serverConfig = {
         new webpack.optimize.OccurrenceOrderPlugin(),
         new webpack.optimize.DedupePlugin(),
 
-        // New webpack.optimize.UglifyJsPlugin({
-        //     Compress: { warnings: false },
-        //     Comments: false
-        // }),
+        new webpack.optimize.UglifyJsPlugin({
+            Compress: { warnings: false },
+            Comments: false
+        }),
         new webpack.DefinePlugin({'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)})
     ]
 }

@@ -25,7 +25,6 @@ class Common extends React.Component<{}, {}> {
                 <Main>
                     {Children.map(children, (child: any) => {
                         let ele= cloneElement(child, { ...props })
-                        console.info(ele)
                         return ele;
                     }
 
