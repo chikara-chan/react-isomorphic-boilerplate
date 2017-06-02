@@ -8,7 +8,7 @@ module.exports = {
     context: path.resolve(__dirname, '..'),
     entry: {
         bundle: [
-            './client',
+            './client/server.dev.ts',
             'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000'
         ],
         vendor: [
@@ -51,9 +51,17 @@ module.exports = {
         }, {
             test: /\.html$/,
             loader: 'html?minimize=false'
-        }]
+        } ,
+        {
+            test: /\.tsx?$/,
+            loader: 'ts-loader'
+        },
+        {
+            test: /\.ts$/,
+            loader: 'awesome-typescript-loader'
+        },]
     },
-    resolve: {extensions: ['', '.js', '.json', '.scss']},
+    resolve: {extensions: ['', '.js', '.json', '.scss','.tsx','.ts']},
     plugins: [
         new webpack.optimize.OccurenceOrderPlugin(),
         new webpack.optimize.CommonsChunkPlugin({
