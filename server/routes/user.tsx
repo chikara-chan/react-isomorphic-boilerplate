@@ -1,14 +1,8 @@
 import * as Router from 'koa-router'
-// import getUserInfo from '../controllers/user'
+import getUserInfo from '../controllers/user'
 
-const router = Router({prefix: '/user'})
+const user = Router({prefix: '/user'})
 
-router.get('/getUserInfo', async (ctx,next)=> {
-    ctx.body = {
-        name: 'Chikara Chan',
-        gender: 'male',
-        age: 20
-    }
-})
+user.get('/getUserInfo', getUserInfo)
 
-export default router
+export default user
