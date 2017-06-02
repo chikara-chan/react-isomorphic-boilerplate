@@ -1,4 +1,4 @@
-import types from '../constants/actionTypes'
+import types from '../constants/ActionTypes'
 import utils from '../../shared/utils'
 
 function replaceUserInfo(userInfo) {
