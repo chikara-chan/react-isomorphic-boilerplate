@@ -19,7 +19,7 @@ function getExternals() {
 clientConfig = {
     context: path.resolve(__dirname, '..'),
     entry: {
-        bundle: './client',
+        bundle: './client/index.tsx',
         vendor: [
             'react',
             'react-dom',
@@ -46,7 +46,7 @@ clientConfig = {
             }
         }, {
             test: /\.scss$/,
-            loader: ExtractTextPlugin.extract('style', 'css?modules&camelCase&importLoaders=1&localIdentName=[hash:base64:8]!postcss!sass')
+            loader: ExtractTextPlugin.extract('style', 'css!postcss!sass')
         }, {
             test: /\.(jpg|png|gif|webp)$/,
             loader: 'url?limit=8000'
@@ -56,10 +56,19 @@ clientConfig = {
         }, {
             test: /\.html$/,
             loader: 'html?minimize=false'
-        }]
+        }
+         ,
+        {
+            test: /\.tsx?$/,
+            loader: 'ts-loader'
+        },
+        {
+            test: /\.ts$/,
+            loader: 'awesome-typescript-loader'
+        } ]
     },
     postcss: [autoprefixer({browsers: ['> 5%']})],
-    resolve: {extensions: ['', '.js', '.json', '.scss']},
+    resolve: {extensions: ['', '.js', '.json', '.scss', '.tsx', '.ts']},
     plugins: [
         new webpack.optimize.OccurrenceOrderPlugin(),
         new webpack.optimize.DedupePlugin(),
@@ -83,7 +92,7 @@ clientConfig = {
 
 serverConfig = {
     context: path.resolve(__dirname, '..'),
-    entry: {server: './server/server.prod'},
+    entry: {server: './server/server.prod.tsx'},
     output: {
         path: path.resolve(__dirname, '../dist/server'),
         filename: '[name].js',
@@ -107,7 +116,7 @@ serverConfig = {
         }, {
             test: /\.scss$/,
             loaders: [
-                'css/locals?modules&camelCase&importLoaders=1&localIdentName=[hash:base64:8]',
+                'css',
                 'sass'
             ]
         }, {
@@ -116,19 +125,31 @@ serverConfig = {
         }, {
             test: /\.json$/,
             loader: 'json'
-        }]
+        }
+            ,
+        {
+            test: /\.tsx?$/,
+            loader: 'ts-loader'
+        },
+        {
+            test: /\.ts$/,
+            loader: 'awesome-typescript-loader'
+        } ]
     },
     externals: getExternals(),
-    resolve: {extensions: ['', '.js', '.json', '.scss']},
+    resolve: {extensions: ['', '.js', '.json', '.scss', '.tsx', '.ts']},
     plugins: [
         new webpack.optimize.OccurrenceOrderPlugin(),
         new webpack.optimize.DedupePlugin(),
+
         new webpack.optimize.UglifyJsPlugin({
-            compress: {warnings: false},
-            comments: false
+            Compress: { warnings: false },
+            Comments: false
         }),
         new webpack.DefinePlugin({'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)})
     ]
 }
 
-module.exports = [clientConfig, serverConfig]
+module.exports = [
+    clientConfig,
+    serverConfig]
