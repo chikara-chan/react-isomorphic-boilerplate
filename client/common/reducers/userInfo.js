@@ -1,4 +1,4 @@
-import types from '../constants/actionTypes'
+import types from '../constants/ActionTypes'
 
 function userInfo(state = null, action) {
     switch (action.type) {
